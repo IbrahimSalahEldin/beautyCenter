@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
-
+use Illuminate\Http\Response;
 class HomeController extends Controller
 {
     /**
@@ -26,4 +26,15 @@ class HomeController extends Controller
         return view("home" , ['posts'=>$posts]);
        
     }
+
+    public function show(string  $id_post)
+    {
+        $post = Post::where('id', $id_post)->first();
+       
+        if ($post) {
+            return view("PostDetal", ['post' => $post]);
+        }
+        return  new Response('', 205);
+    }
+
 }

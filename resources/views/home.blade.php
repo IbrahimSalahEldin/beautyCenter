@@ -25,7 +25,6 @@
   <!-- <link rel="stylesheet" type="text/css" href="resources/css/home.css"> -->
 
 
-   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body class="hold-transition sidebar-mini">
   <!-- nav bar -->
@@ -99,8 +98,10 @@
         <p class="serviceTitle"> خدماتنا للحصول علي النضارة والاشراق والجمال </p>
       @foreach($posts as $post)
       <div class="col-md-3 col-12 mx-3 mb-5  mydata">
-      <img class="imgService"  src="{{asset('images/posts/'.$post->image)}} "/>
-      <div class="serviceContent  ">
+        <a href="{{route('post.detal', ['id' => $post->id])}}" >
+           <img  class="imgService"  src="{{asset('images/posts/'.$post->image)}} "/>
+      </a>
+      <div class="serviceContent">
           <p  class="title"> {{$post->title}}</p>
           <p class="price"> {{$post["price"]}}$</p>
       </div>
