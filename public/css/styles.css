@@ -1,0 +1,94 @@
+
+*{
+}
+.photo {
+    background-image: url("../images/staticimg/women1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Noto Sans Arabic', sans-serif;
+  }
+.image2{
+    width: 100%;
+    border-radius: 20px;
+}
+.data,.NavBar{
+    direction: rtl;
+}
+.logo{
+    width:100px;
+    height: 50px;
+}
+.mydata{
+position: relative;
+display: flex;
+justify-content: center;
+}
+.imgService{
+    width: 100%;
+    height: 300px;
+}
+.serviceContent{
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgba(255, 255, 255, 0.826);
+    font-size: 12px;
+   text-align: center;
+}
+.title{
+    color: #ab8d75;
+    font-size: 16px;
+    font-weight: 700;
+}
+.price{
+    margin-top: -13px;
+    font-weight: 500;
+}
+.serviceTitle{
+    color: #ab8d75;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    font-weight: 700;
+}
+.contactSection{
+    background-image: url("../images/staticimg/2022.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.message{
+    background-color: white;
+}
+.textArea{
+
+}
+.Mybtn{
+    background-color: #ed806b;
+    width: 100px;
+    height: 40px;
+    color: white;
+}
+.Mybtn:hover{
+    border: 2px solid #ed806b;
+    color: #ed806b;
+}
+.titleContact{
+    margin-top: 30px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+}
