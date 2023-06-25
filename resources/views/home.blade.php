@@ -115,13 +115,13 @@
 <section class="contactSection pt-4 mb-3 mt-5" dir="rtl">
     <div class="container d-flex justify-content-center">
       <div class="row">
-        <p class="titleContact">اكتب استفسارك الان</p>
+        <p class="titleContact">اكتب استفسارك الآن</p>
         <div class="col-12 message">
           <form>
             <div class="mb-3 p-5 d-flex justify-content-center">
               <textarea class="form-control textArea" id="inputText" rows="4" placeholder="رسالتك"></textarea>
             </div>
-            <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">ارسال</button>
+            <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إرسال</button>
           </form>
         </div>
       </div>
@@ -215,8 +215,8 @@
   <script>
     function sendMessage() {
       var inputText = document.getElementById("inputText").value;
-      var phoneNumber = "01120848475"; // Replace with the WhatsApp phone number
-      var whatsappURL = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(inputText);
+      var phoneNumber = "201002147118"; // رقم الواتساب في مصر
+      var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(inputText);
       window.open(whatsappURL, "_blank");
     }
   </script>
