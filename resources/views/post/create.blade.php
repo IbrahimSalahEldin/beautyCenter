@@ -31,7 +31,8 @@
 
   <div class="form-group mt-3">
     <label for="exampleInputPassword1">Description</label>
-    <input type="text" class="form-control" value="{{old('description')}}" name="description" id="exampleInputPassword1" placeholder="Description">
+    <textarea class="form-control" value="{{old('description')}}" name="description" id="exampleInputPassword1" placeholder="Description">
+    </textarea>
   </div>
   @error('description')
   <div class="alert alert-danger">{{$message}}</div>
