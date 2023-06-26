@@ -8,15 +8,7 @@
  
 <h1> Edit post</h1>
 
-<!-- @if($errors->any())
-    <div class="alert alert-danger">
-      <ul>
-        @foreach($errors->all() as $error)
-          <li>{{$error}}</li>
-        @endforeach
-      </ul>
-    </div>
-    @endif  -->
+
 
     <form method="post" action="{{ route('post.update', ['post' => $post->id]) }}" enctype="multipart/form-data">
     @csrf
@@ -52,7 +44,8 @@
 
   <div class="form-group mt-3">
     <label for="exampleInputPassword1">Description</label>
-    <input type="text" class="form-control" value="{{ $post->description }}"  name="description" id="exampleInputPassword1" placeholder="Description">
+    <textarea  class="form-control" value="{{ $post->description }}"  name="description" id="exampleInputPassword1" placeholder="Description">
+      </textarea>
   </div>
   @error('description')
   <div class="alert alert-danger">{{$message}}</div>

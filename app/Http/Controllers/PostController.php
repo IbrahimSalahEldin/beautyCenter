@@ -20,7 +20,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::where('id', '>', 0)->paginate(5);
+        $posts = Post::where('id', '>', 0)->paginate(4);
         
         return view("post.index" , ['posts'=>$posts]);
     }
