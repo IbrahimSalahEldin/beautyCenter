@@ -92,3 +92,17 @@ justify-content: center;
     text-align: center;
     font-weight: 700;
 }
+/* ////////////////////////   Details    //////////////////////////// */
+
+.imgDetails{
+    border-radius: 50%;
+    border: 5px solid rgb(221, 216, 216);
+}
+
+.product{
+    font-weight: 700;
+    color: #ab8d75;
+}
+h1{
+    color: #ab8d75;
+}
