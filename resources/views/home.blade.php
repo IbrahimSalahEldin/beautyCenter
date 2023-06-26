@@ -215,7 +215,7 @@
   <script>
     function sendMessage() {
       var inputText = document.getElementById("inputText").value;
-      var phoneNumber = "201002147118"; // رقم الواتساب في مصر
+      var phoneNumber = "0556883088"; // رقم الواتساب في مصر
       var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(inputText);
       window.open(whatsappURL, "_blank");
     }
