@@ -21,12 +21,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::where('id', '>', 0)->paginate(5);
-        
+        $posts = Post::paginate(5);
         return view("home" , ['posts'=>$posts]);
        
     }
-
+ 
     public function show(string  $id_post)
     {
         $post = Post::where('id', $id_post)->first();

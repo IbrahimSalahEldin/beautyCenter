@@ -49,7 +49,7 @@
 
 
         <div class="d-flex justify-content-center">
-        {!! $posts->links() !!}
+        {{ $posts->render('custom-pagination') }}
         </div>
    
 <a class="" aria-current="page" href="{{route('post.create')}}"><button class="btn btn-primary w-25">Add Post</button></a>

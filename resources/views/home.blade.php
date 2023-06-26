@@ -111,6 +111,7 @@
      </div>
 </section>
 
+{{ $posts->render('custom-pagination') }}
 <!-- end product section -->
 <!--third section  -->
 <section class="contactSection pt-4 mb-3 mt-5" dir="rtl">
@@ -210,9 +211,7 @@
 
 
 
-  <div class="d-flex justify-content-center">
-  {!! $posts->links() !!}
-  </div>
+
   <script>
     function sendMessage() {
       var inputText = document.getElementById("inputText").value;

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
-   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+  
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="container">
