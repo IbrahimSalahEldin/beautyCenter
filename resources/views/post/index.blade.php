@@ -6,7 +6,7 @@
     <table class="table mt-2 rounded-3" style="color:black; border: 5px solid gray; border-radius:5px;">
   
         <tr>
-            <th> img</th> <th> title</th> <th> Price</th> <th> Description </th> <th> create at </th>
+            <th> img</th> <th> title</th><th> category  </th> <th> Price</th> <th> Description </th> <th> create at </th>
             <th>Actions</th>
         </tr>
 
@@ -17,6 +17,17 @@
                 <td><img width="75"  src="{{asset('images/posts/'.$post->image)}} "/></td>
               
                 <td> {{$post->title}}</td>
+                <td>
+                    @if($post->category == 'makeup')
+                    مكياج
+                    @elseif($post->category == 'cure_humans')
+                     علاج البشر
+                    @elseif($post->category == 'makeup_courses')
+                     دورات تعليمية للمكياج
+                    @else
+                    منتجات
+                    @endif
+                </td>
                 <td> {{$post["price"]}}</td>
                 <td> {{$post["description"]}}</td>  
                 <td>{{ $post->created_at->format('d/m/Y H:i:s') }}</td>

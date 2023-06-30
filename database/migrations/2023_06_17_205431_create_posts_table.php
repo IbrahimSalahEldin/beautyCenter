@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
+            $table->enum('category', ['makeup', 'cure_humans', 'makeup_courses','products'])->default('makeup');
             $table->string('image');
             $table->decimal('price');
             $table->string('slug')->nullable();

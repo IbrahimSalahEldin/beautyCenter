@@ -27,6 +27,10 @@
 
 </head>
 <body class="hold-transition sidebar-mini">
+
+
+
+
   <!-- nav bar -->
 <section class="NavBar" dir="rtl">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
