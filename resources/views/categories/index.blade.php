@@ -42,7 +42,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent" dir="rtl">
         <ul class="navbar-nav  mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">الصفحة الرئيسية</a>
+            <a class="nav-link active" aria-current="page" href="/">الصفحة الرئيسية</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about"> اقرأ عنا  </a>
@@ -70,32 +70,27 @@
 </section>
   <!-- end first section  -->
 
-  <!-- second  section -->
-  <table class="table mt-5 ">
-  
-  <tr>
-      <th> img</th> <th> title</th> <th> Price</th> <th> Description </th> <th> create at </th>
-      
-  </tr>
 
+  <section class="mt-5 pt-3 mb-5 pb-3" id="service">
+    <div class="container">
+      <div class="row d-flex justify-content-center" dir="rtl">
+        <p class="serviceTitle"> خدماتنا للحصول علي النضارة والاشراق والجمال </p>
+      @foreach($posts as $post)
+      <div class="col-md-3 col-12 mx-3 mb-5  mydata">
+        <a href="{{route('post.detal', ['id' => $post->id])}}" >
+           <img  class="imgService"  src="{{asset('images/posts/'.$post->image)}} "/>
+      </a>
+      <div class="serviceContent">
+          <p  class="title"> {{$post->title}}</p>
+          <p class="price"> {{$post["price"]}}$</p>
+      </div>
+      </div>
+      @endforeach
+      </div>
+     </div>
+</section>
 
-  @foreach($posts as $post)
-      <tr>
-         
-          <td><img width="100"  src="{{asset('images/posts/'.$post->image)}} "/></td>
-        
-          <td> {{$post->title}}</td>
-          <td> {{$post["price"]}}</td>
-          <td> {{$post["description"]}}</td>  
-          <td>{{ $post->created_at->format('d/m/Y H:i:s') }}</td>
-        
-      </tr>
-     
-  @endforeach
-
-
-</table>
-
+{{ $posts->render('categories/custom-pagination') }}
 
 
 <!-- end product section -->

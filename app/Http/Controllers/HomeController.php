@@ -36,7 +36,7 @@ class HomeController extends Controller
         $post = Post::where('id', $id_post)->first();
        
         if ($post) {
-            return view("PostDetal", ['post' => $post]);
+            return view("categories.PostDetal", ['post' => $post]);
         }
         return  new Response('', 205);
     }

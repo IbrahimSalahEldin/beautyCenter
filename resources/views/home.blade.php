@@ -96,6 +96,63 @@
   <!-- end second section  -->
 <!-- product section -->
 
+<table class="table mt-5 ">
+  
+  <tr>
+      <th> img</th> <th> name</th> <th> action</th>
+      
+  </tr>
+
+
+  
+      <tr>
+         
+          <td><img width="100"  src=""/></td>
+          <td>category name</td>
+          <td><a href="{{ route('category', 'makeup') }}">مكياج</a> </td>  
+
+         
+        
+      </tr>
+
+  
+      <tr>
+         
+      <td><img width="100"  src=""/></td>
+          <td>category name</td>
+          <td><a href="{{ route('category', 'cure_humans') }}">علاج البشر</a> </td>  
+
+         
+        
+      </tr>
+
+  
+      <tr>
+         
+          <td><img width="100"  src=""/></td>
+          <td>category name</td>
+          <td><a href="{{ route('category', 'makeup_courses') }}">دورات تعليمية للمكياج</a> </td>  
+
+         
+        
+      </tr>
+
+  
+      <tr>
+         
+          <td><img width="100"  src=""/></td>
+          <td>category name</td>
+         
+          <td><a href="{{ route('category', 'products') }}">منتجات</a> </td>  
+
+         
+        
+      </tr>
+     
+
+
+
+</table>
 
 
 <!-- end product section -->
@@ -169,70 +226,7 @@
   
 <!-- End of .container -->
 <!-- end footer -->
-<table class="table mt-5 ">
-  
-  <tr>
-      <th> img</th> <th> title</th> <th> Price</th> <th> Description </th> <th> create at </th>
-      
-  </tr>
 
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-        
-          <td>$post->title</td>
-          <td>$post["price"]</td>
-          <td><a href="{{ route('category', 'makeup') }}">مكياج</a> </td>  
-
-         
-        
-      </tr>
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-        
-          <td>$post->title</td>
-          <td>$post["price"]</td>
-          <td><a href="{{ route('category', 'cure_humans') }}">علاج البشر</a> </td>  
-
-         
-        
-      </tr>
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-        
-          <td>$post->title</td>
-          <td>$post["price"]</td>
-          <td><a href="{{ route('category', 'makeup_courses') }}">دورات تعليمية للمكياج</a> </td>  
-
-         
-        
-      </tr>
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-        
-          <td>$post->title</td>
-          <td>$post["price"]</td>
-          <td><a href="{{ route('category', 'products') }}">منتجات</a> </td>  
-
-         
-        
-      </tr>
-     
-
-
-
-</table>
 
 
 
