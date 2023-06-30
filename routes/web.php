@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/category/{category}', [App\Http\Controllers\HomeController::class, 'category'])->name('category');
 Route::get('/post/detals/{id}', [App\Http\Controllers\HomeController::class, 'show'])->name('post.detal');
 
 
@@ -27,8 +28,6 @@ Route::get('/post/detals/{id}', [App\Http\Controllers\HomeController::class, 'sh
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
-    
-
     Route::resource('/post', PostController::class)->middleware('auth');
 });
 

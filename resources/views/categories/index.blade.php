@@ -71,30 +71,30 @@
   <!-- end first section  -->
 
   <!-- second  section -->
-  <section class="mt-5 mb-5 pt-5" id="about">
-    <div class="container">
-      <div class="row d-flex justify-content-around">
-        <div class=" col-md-5 col-12 data mb-3">
-          <h2>
-             مرحبا بكم في مركز فيحاء للتجميل 
-          </h2>
-          <p >
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
-          </p>
-        </div>
-        <div class="col-12 col-md-5 mb-3">
-            <img class="image2" src="{{asset('images/staticimg/women2.png')}} " alt="img2">
-        </div>
+  <table class="table mt-5 ">
+  
+  <tr>
+      <th> img</th> <th> title</th> <th> Price</th> <th> Description </th> <th> create at </th>
+      
+  </tr>
 
-      </div>
-    </div>
-  </section>
-  <!-- end second section  -->
-<!-- product section -->
+
+  @foreach($posts as $post)
+      <tr>
+         
+          <td><img width="100"  src="{{asset('images/posts/'.$post->image)}} "/></td>
+        
+          <td> {{$post->title}}</td>
+          <td> {{$post["price"]}}</td>
+          <td> {{$post["description"]}}</td>  
+          <td>{{ $post->created_at->format('d/m/Y H:i:s') }}</td>
+        
+      </tr>
+     
+  @endforeach
+
+
+</table>
 
 
 
@@ -169,70 +169,7 @@
   
 <!-- End of .container -->
 <!-- end footer -->
-<table class="table mt-5 ">
-  
-  <tr>
-      <th> img</th> <th> title</th> <th> Price</th> <th> Description </th> <th> create at </th>
-      
-  </tr>
 
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-        
-          <td>$post->title</td>
-          <td>$post["price"]</td>
-          <td><a href="{{ route('category', 'makeup') }}">مكياج</a> </td>  
-
-         
-        
-      </tr>
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-        
-          <td>$post->title</td>
-          <td>$post["price"]</td>
-          <td><a href="{{ route('category', 'cure_humans') }}">علاج البشر</a> </td>  
-
-         
-        
-      </tr>
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-        
-          <td>$post->title</td>
-          <td>$post["price"]</td>
-          <td><a href="{{ route('category', 'makeup_courses') }}">دورات تعليمية للمكياج</a> </td>  
-
-         
-        
-      </tr>
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-        
-          <td>$post->title</td>
-          <td>$post["price"]</td>
-          <td><a href="{{ route('category', 'products') }}">منتجات</a> </td>  
-
-         
-        
-      </tr>
-     
-
-
-
-</table>
 
 
 

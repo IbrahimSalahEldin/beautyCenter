@@ -21,12 +21,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $makeups = Post::where('category', 'مكياج')->paginate(5);
-        $cure_humans = Post::where('category', 'علاج البشر')->paginate(5);
-        $makeup_courses = Post::where('category', 'دورات تعليمية للمكياج')->paginate(5);
-        $products = Post::where('category', 'منتجات')->paginate(5);
+       
+        return view('home');
+    }
 
-        return view('post.index', compact('makeups', 'cure_humans', 'makeup_courses', 'products'));
+    public function category(string $category)
+    {
+        $posts = Post::where('category', $category)->paginate(5);
+        return view('categories.index', compact( 'posts'));
     }
  
     public function show(string  $id_post)
