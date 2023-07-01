@@ -13,6 +13,10 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Cairo&family=Caveat&family=IBM+Plex+Sans+Arabic:wght@500&family=Noto+Sans+Arabic:wght@400;900&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
      <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}"> -->
@@ -33,11 +37,13 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent" dir="rtl">
-        <ul class="navbar-nav  mb-2 mb-lg-0">
+      <div class= "col-10 d-flex justify-content-center">
+        <ul class="navbar-nav Links  mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('home')}}" >الصفحة الرئيسية</a>
+            <a class="nav-link " aria-current="page" href="{{route('home')}}" >الصفحة الرئيسية</a>
           </li>
         </ul>
+       </div>
       </div>
     </div>
   </nav>
@@ -45,18 +51,22 @@
 <section class="details pt-5 mt-5 mb-5 pb-5" dir="rtl">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-12 mb-3 ">
+            <div class="col-md-6 col-12 mb-3" data-aos="fade-left"
+                  data-aos-anchor="#example-anchor"
+                  data-aos-offset="500"
+                  data-aos-duration="500">
             <img width="500" class="imgDetails"  src="{{asset('images/posts/'.$post->image)}} "/>
             </div>
-            <div class="row col-md-6 mb-3 col-12 d-flex justify-content-center align-content-center" >
+            <div class="row col-md-6 mb-3 col-12 d-flex  align-content-center"data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
                 <h1>
                 {{$post->title}}</td>
                 </h1>
-                <p>
-                 <span class="product">السعر: </span> {{$post["price"]}}دولار    
-                </p>
-                <p>
-                <td> {{$post["description"]}}</td>   
+               
+                <p> {{$post["description"]}}</p>   
+                <p class="salary">
+                  {{$post["price"]}}دولار    
                 </p>
                 <form>
                 <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إحجز الأن</button>
@@ -129,6 +139,11 @@ function sendMessage() {
   var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
   window.open(whatsappURL, "_blank");
 }
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script> 

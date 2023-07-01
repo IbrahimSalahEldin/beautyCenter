@@ -57,7 +57,7 @@
 
 
         <div class="d-flex justify-content-center">
-        {{ $posts->render('custom-pagination') }}
+        {{ $posts->render('categories.custom-pagination') }}
         </div>
    
 

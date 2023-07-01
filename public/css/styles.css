@@ -1,27 +1,22 @@
 
 *{
-}
-.photo {
-    background-image: url("../images/staticimg/women1.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 50px;
+    font-family: 'Assistant', sans-serif;
+    font-family: 'Cairo', sans-serif;
     font-family: 'Caveat', cursive;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-family: 'Noto Sans Arabic', sans-serif;
-  }
+}
 .image2{
     width: 100%;
     border-radius: 20px;
 }
+.NavBar{
+    background-color: #6F4E37;
+
+}
 .data,.NavBar{
     direction: rtl;
+    
 }
 .logo{
     width:100px;
@@ -76,14 +71,26 @@ justify-content: center;
 
 } */
 .Mybtn{
-    background-color: #ed806b;
+    background-color: #6F4E37;
     width: 100px;
     height: 40px;
     color: white;
 }
 .Mybtn:hover{
-    border: 2px solid #ed806b;
-    color: #ed806b;
+    border: 2px solid #6F4E37;
+    color: #6F4E37;
+}
+.salary{
+    background-color: #E1C16E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 20px;
 }
 .titleContact{
     margin-top: 30px;
@@ -96,7 +103,7 @@ justify-content: center;
 
 .imgDetails{
     border-radius: 50%;
-    border: 5px solid rgb(221, 216, 216);
+    border: 5px solid #E1C16E;
 }
 
 .product{
@@ -105,4 +112,71 @@ justify-content: center;
 }
 h1{
     color: #ab8d75;
+}
+
+.Links a{
+    font-size: 20px;
+    font-weight: 700;
+    color: #E1C16E;
+    margin-left: 30px;
+}
+.SlidPhoto{
+    height: 500px;
+    width: 100%;
+}
+.beatyTitle{
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+.fay7aa{
+    color: #6F4E37;
+}
+/* categories */
+
+.CategoryImage{
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+.category{
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.category:hover {
+  transform: scale(1.1);
+}
+.CategoryWord{
+position: absolute;
+    bottom: 0%;
+    right:0% ;
+    background-color: #e1c06e94;
+    width:100%;
+    height: 40px;
+    text-align: center;
+    /* border-radius: 10px; */
+    color: #6F4E37;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories{
+    font-size: 35px;
+    font-weight: bold;
+    color: #ab8d75;
+}
+
+/* end categories */
+
+.galary{
+    background-image: linear-gradient(white, #e1c06e94,white);
+
+}
+.GalaryPhoto{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
 }

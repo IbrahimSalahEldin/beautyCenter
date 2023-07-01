@@ -3,7 +3,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +16,28 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Cairo&family=Caveat&family=IBM+Plex+Sans+Arabic:wght@500&family=Noto+Sans+Arabic:wght@400;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+  rel="stylesheet"
+/>
     
      <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}"> -->
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
@@ -40,9 +60,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent" dir="rtl">
-        <ul class="navbar-nav  mb-2 mb-lg-0">
+        <div class= "col-10 d-flex justify-content-center">
+        <ul class="navbar-nav  mb-2 mb-lg-0 Links">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">الصفحة الرئيسية</a>
+            <a class="nav-link " aria-current="page" href="#home">الصفحة الرئيسية</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about"> اقرأ عنا  </a>
@@ -51,6 +72,7 @@
             <a class="nav-link" href="#service">  خدماتنا  </a>
           </li>
         </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -59,35 +81,93 @@
  
   <!-- end navbar -->
   <!-- first section -->
-<section  id="home">
-  <div class="container-fluid">
-  <div class="row">
-      <div class="photo col-12">
-        <p class="content" dir="rtl"> مرحبا بكم في صالون تجميل فيحاء </p>
+
+<!-- Carousel wrapper -->
+    <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-mdb-target="#carouselBasicExample"
+          data-mdb-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-mdb-target="#carouselBasicExample"
+          data-mdb-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-mdb-target="#carouselBasicExample"
+          data-mdb-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
       </div>
+
+      <!-- Inner -->
+      <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <img src="{{asset('images/staticimg/wo2.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
+          <div class="carousel-caption d-none d-md-block">
+            <p class="beatyTitle">مرحبا بكم في مركز تجميل
+              <br>
+              <span class="fay7aa"> ف</span>يحاء</p>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+        <img src="{{asset('images/staticimg/wo3.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
+        <div class="carousel-caption d-none d-md-block">
+          <p class="beatyTitle">كوني متألقة ومشرقة 
+              </p>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+        <img src="{{asset('images/staticimg/women1.png')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
+        <div class="carousel-caption d-none d-md-block">
+            <p class="beatyTitle"> تمتعي ببشرة نضرة
+              </p>
+          </div>
+        </div>
+      </div>
+      <!-- Inner -->
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </div>
-</section>
+<!-- Carousel wrapper -->
+
   <!-- end first section  -->
 
   <!-- second  section -->
   <section class="mt-5 mb-5 pt-5" id="about">
     <div class="container">
       <div class="row d-flex justify-content-around">
-        <div class=" col-md-5 col-12 data mb-3">
-          <h2>
+        <div class=" col-md-5 col-12 data mb-3 row d-flex justify-content-center align-items-center text-center" data-aos="fade-right">
+          <h2 >
              مرحبا بكم في مركز فيحاء للتجميل 
           </h2>
           <p >
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
-            بسم الله الرحمن الرحيم لا حولة و لا قوة الا بالله اللهم انك أنت الغفور الرحيم اللهم عافنا فيما عفيت 
+          يقوم الطبيب المختص بمعاينة الحالة وفحصها جيداً قبل العملية، ومن ثم يتم تجهيزها وتحضيرها لبدء عملية التنظيف. يلجأ الطبيب أثناء العملية إلى استعمال ذراع خاصة أو عصا في سبيل التخلص من الأوساخ المتراكمة في أعماق مسامات الجلد، والخلايا التالفة والميتة، والدهون المتراكمة.
           </p>
         </div>
-        <div class="col-12 col-md-5 mb-3">
-            <img class="image2" src="{{asset('images/staticimg/women2.png')}} " alt="img2">
+        <div class="col-12 col-md-5 mb-3" data-aos="fade-left">
+            <img class="image2" src="{{asset('images/staticimg/wo5.jpg')}} " alt="img2">
         </div>
 
       </div>
@@ -96,65 +176,82 @@
   <!-- end second section  -->
 <!-- product section -->
 
-<table class="table mt-5 ">
-  
-  <tr>
-      <th> img</th> <th> name</th> <th> action</th>
-      
-  </tr>
+<section class="galary mb-5 pt-3"  dir="rtl">
+  <div class="container d-flex justify-content-center ">
+    <div class="row">
+    <p class="categories text-center">صور</p>
+    <div class="CategoryPhotos col-12 row  d-flex justify-content-around align-items-around">
+      <div class="col-3" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+      <img src="{{asset('images/staticimg/g1.jpg')}}" alt="img3" class="GalaryPhoto"  >
+      </div>
+      <div class="col-3 mt-5" data-aos="fade-up"
+     data-aos-duration="3000">
+      <img src="{{asset('images/staticimg/g2.jpg')}}" alt="img3" class="GalaryPhoto"  >
 
+      </div>
+      <div class="col-3" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+      <img src="{{asset('images/staticimg/g3.jpg')}}" alt="img3" class="GalaryPhoto"  >
 
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-          <td>category name</td>
-          <td><a href="{{ route('category', 'makeup') }}">مكياج</a> </td>  
+      </div>
+    </div>
 
-         
-        
-      </tr>
+    </div>
+  </div>
+</section>
 
-  
-      <tr>
-         
-      <td><img width="100"  src=""/></td>
-          <td>category name</td>
-          <td><a href="{{ route('category', 'cure_humans') }}">علاج البشر</a> </td>  
-
-         
-        
-      </tr>
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-          <td>category name</td>
-          <td><a href="{{ route('category', 'makeup_courses') }}">دورات تعليمية للمكياج</a> </td>  
-
-         
-        
-      </tr>
-
-  
-      <tr>
-         
-          <td><img width="100"  src=""/></td>
-          <td>category name</td>
-         
-          <td><a href="{{ route('category', 'products') }}">منتجات</a> </td>  
-
-         
-        
-      </tr>
-     
-
-
-
-</table>
-
-
+<section>
+  <div class="container" dir="rtl">
+    <div class="row">
+      <p class="categories">خدماتنا</p>
+      <div class="col-lg-3 col-md-6 col-12 mb-3 "  data-aos="fade-up"
+     data-aos-duration="3000">
+        <div class="category">
+        <a href="{{ route('category', 'makeup') }}" >
+          <img src="{{asset('images/staticimg/c1.jpg')}}" alt="img3" class="CategoryImage">
+         <p class="CategoryWord"> 
+          مكياج</p>
+        </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 mb-3 mt-3 "  data-aos="fade-up"
+     data-aos-duration="3000">
+      <div class="category">
+      <a href="{{ route('category', 'cure_humans') }}"> 
+          <img src="{{asset('images/staticimg/c2.jpg')}}" alt="img3"  class="CategoryImage">
+          <p class="CategoryWord"> 
+          علاج البشرة</p>      
+            </a> 
+        </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 mb-3 "  data-aos="fade-up"
+     data-aos-duration="3000">
+        <div class="category">
+        <a href="{{ route('category', 'makeup_courses') }}">
+          <img src="{{asset('images/staticimg/c3.jpg')}}" alt="img3"  class="CategoryImage">
+          <p class="CategoryWord"> 
+          دورات تعليمية للمكياج
+             </p> 
+          </a> 
+        </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 mb-3 mt-3 "  data-aos="fade-up"
+     data-aos-duration="3000">
+        <div class="category">
+        <a href="{{ route('category', 'products') }}"> 
+          <img src="{{asset('images/staticimg/montagat.jpg')}}" alt="img3"  class="CategoryImage">
+          <p class="CategoryWord"> 
+          منتجات  
+             </p>  
+          </a>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
 <!-- end product section -->
 <!--third section  -->
 <section class="contactSection pt-4 mb-3 mt-5" dir="rtl">
@@ -219,7 +316,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a class="text-white" href="https://fayhaa.com/">fayhaa.com</a>
   </div>
   <!-- Copyright -->
 </footer>
@@ -245,6 +342,15 @@
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
+></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
