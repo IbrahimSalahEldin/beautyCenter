@@ -59,7 +59,7 @@
                 <td> {{$post["description"]}}</td>   
                 </p>
                 <form>
-                <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إرسال</button>
+                <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">احجز الان</button>
                </form>
             </div>
         </div>
