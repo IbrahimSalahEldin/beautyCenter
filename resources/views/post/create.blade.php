@@ -23,7 +23,7 @@
   
   <div class="form-group mt-3">
     <label for="exampleInputEmail2">categoreis</label>
-    <select name="category"  
+    <select name="category"    class="form-control"
     value="{{old('category')}}"
     id="exampleInputEmail2" >
       <option value="makeup">مكياج</option>
