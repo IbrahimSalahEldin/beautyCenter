@@ -1,16 +1,16 @@
   
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light " style="background-color:#343a40; color:white;" >
   <!-- Left navbar links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      <!-- <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a> -->
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="{{route('post.index')}}" class="nav-link">Posts</a>
+      <a href="{{route('post.index')}}" class="nav-link text-white">Posts</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="{{route('post.create')}}" class="nav-link">Create post</a>
+      <a href="{{route('post.create')}}" class="nav-link text-white">Create post</a>
     </li>
   </ul>
 
@@ -18,8 +18,8 @@
   <ul class="navbar-nav ml-auto">
     <!-- Existing code for other right navbar links -->
 
-    <li class="nav-item d-none d-sm-inline-block">
-      <a class="dropdown-item" href="{{ route('logout') }}"
+    <li class="nav-item d-none d-sm-inline-block ">
+      <a class=" text-white" href="{{ route('logout') }}"
         onclick="event.preventDefault();
         document.getElementById('logout-form').submit();">
         {{ __('Logout') }}

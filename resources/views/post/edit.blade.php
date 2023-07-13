@@ -6,7 +6,7 @@
     <div class="row w-75">
 
  
-<h1> Edit post</h1>
+<h1 class="mb-3"> Edit post</h1>
 
 
 
@@ -29,7 +29,7 @@
   
   <div class="form-group mt-3">
     <label for="exampleInputEmail2">categoreis</label>
-    <select name="category"  
+    <select name="category"   class="form-control"
     value="{{$post->category}}"
     id="exampleInputEmail2" >
       <!-- <option value="مكياج">مكياج</option>
