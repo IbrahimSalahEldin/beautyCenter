@@ -181,3 +181,13 @@ position: absolute;
     height: 400px;
     border-radius: 10px;
 }
+.DIF_CON{
+    margin-top:40px ;
+}
+
+@media screen and (max-width: 1000px){
+.IMG_CON{
+margin-top: 20px;
+}
+
+}

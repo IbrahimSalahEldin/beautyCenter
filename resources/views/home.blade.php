@@ -83,8 +83,7 @@
   <!-- first section -->
 
 <!-- Carousel wrapper -->
-    <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
-      <!-- Indicators -->
+    <!-- <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
       <div class="carousel-indicators">
         <button
           type="button"
@@ -108,9 +107,7 @@
         ></button>
       </div>
 
-      <!-- Inner -->
       <div class="carousel-inner">
-        <!-- Single item -->
         <div class="carousel-item active">
           <img src="{{asset('images/staticimg/wo2.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
           <div class="carousel-caption d-none d-md-block">
@@ -120,7 +117,6 @@
           </div>
         </div>
 
-        <!-- Single item -->
         <div class="carousel-item">
         <img src="{{asset('images/staticimg/wo3.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
         <div class="carousel-caption d-none d-md-block">
@@ -129,7 +125,6 @@
           </div>
         </div>
 
-        <!-- Single item -->
         <div class="carousel-item">
         <img src="{{asset('images/staticimg/women1.png')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
         <div class="carousel-caption d-none d-md-block">
@@ -138,9 +133,7 @@
           </div>
         </div>
       </div>
-      <!-- Inner -->
 
-      <!-- Controls -->
       <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -149,7 +142,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
+    </div> -->
 <!-- Carousel wrapper -->
 
   <!-- end first section  -->
@@ -180,27 +173,29 @@
   <div class="container d-flex justify-content-center ">
     <div class="row">
     <p class="categories text-center">صور</p>
-    <div class="CategoryPhotos col-12 row  d-flex justify-content-around align-items-around">
-      <div class="col-3" data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-      <img src="{{asset('images/staticimg/g1.jpg')}}" alt="img3" class="GalaryPhoto"  >
-      </div>
-      <div class="col-3 mt-5" data-aos="fade-up"
-     data-aos-duration="3000">
-      <img src="{{asset('images/staticimg/g2.jpg')}}" alt="img3" class="GalaryPhoto"  >
+  <div class="CategoryPhotos col-12 row  d-flex justify-content-around align-items-around">
 
-      </div>
-      <div class="col-3" data-aos="fade-down"
+<div class="col-md-3 col-12 IMG_CON" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" >
+      <img src="{{asset('images/staticimg/home1.jpeg')}}" alt="img3" class="GalaryPhoto"  >
+</div>
+<div class="col-md-3 col-12  IMG_CON DIF_CON" data-aos="fade-up"
+     data-aos-duration="3000">
+      <img src="{{asset('images/staticimg/home2.jpeg')}}" alt="img3" class="GalaryPhoto"  >
+
+</div>
+    <div class="col-md-3 col-12 IMG_CON" data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500">
-      <img src="{{asset('images/staticimg/g3.jpg')}}" alt="img3" class="GalaryPhoto"  >
+      <img src="{{asset('images/staticimg/home3.jpeg')}}" alt="img3" class="GalaryPhoto"  >
 
       </div>
     </div>
 
     </div>
   </div>
+</div>
 </section>
 
 <section id="service">
