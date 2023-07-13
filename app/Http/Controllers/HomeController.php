@@ -21,11 +21,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-        $posts = Post::paginate(6);
-
-        return view("home" , ['posts'=>$posts]);
        
+        return view('home');
+    }
+
+    public function category(string $category)
+    {
+        $posts = Post::where('category', $category)->paginate(5);
+        return view('categories.index', compact( 'posts'));
     }
  
     public function show(string  $id_post)
@@ -33,7 +36,7 @@ class HomeController extends Controller
         $post = Post::where('id', $id_post)->first();
        
         if ($post) {
-            return view("PostDetal", ['post' => $post]);
+            return view("categories.PostDetal", ['post' => $post]);
         }
         return  new Response('', 205);
     }

@@ -18,12 +18,33 @@
   <div class="alert alert-danger">{{$message}}</div>
   @enderror
 
+
+  <!-- category -->
   
   <div class="form-group mt-3">
-    <label for="exampleInputEmail1">Price</label>
+    <label for="exampleInputEmail2">categoreis</label>
+    <select name="category"  
+    value="{{old('category')}}"
+    id="exampleInputEmail2" >
+      <option value="makeup">مكياج</option>
+      <option value="cure_humans">علاج البشر</option>
+      <option value="makeup_courses">دورات تعليمية للمكياج</option>
+      <option value="products">منتجات</option>
+    </select>
+    <!-- <input type="text" class="form-control" name="category" 
+    value="{{old('category')}}"
+    id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter a catygory"> -->
+  </div>
+  @error('category')
+  <div class="alert alert-danger">{{$message}}</div>
+  @enderror
+
+  
+  <div class="form-group mt-3">
+    <label for="exampleInputEmail">Price</label>
     <input type="number" class="form-control" name="price" 
     value="{{old('price')}}"
-    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter price">
+    id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter price">
   </div>
   @error('price')
   <div class="alert alert-danger">{{$message}}</div>

@@ -49,6 +49,7 @@ class PostController extends Controller
             $image->move(public_path('images/posts'), $image_info);  
         }
         $post->title= $post_info['title'];
+        $post->category= $post_info['category'];
         $post->price= $post_info['price'];
         $post->description = $post_info['description'];
         $post->slug =  Str::slug($request->post('title'));
@@ -100,6 +101,7 @@ class PostController extends Controller
             $img->move(public_path('images/posts'), $img_name);
         }
         $post->title= $post_info['title'];
+        $post->category= $post_info['category'];
         $post->price= $post_info['price'];
         $post->description = $post_info['description'];
         $post->slug =  Str::slug($request->post('title'));

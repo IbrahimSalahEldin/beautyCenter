@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<a class=""  aria-current="page" href="{{route('post.create')}}"><button class="btn btn-primary w-25">Add Post</button></a>
 
-
-    <table class="table mt-5 rounded-3" style="color:black; border: 5px solid gray; border-radius:5px;">
+    <table class="table mt-2 rounded-3" style="color:black; border: 5px solid gray; border-radius:5px;">
   
         <tr>
-            <th> img</th> <th> title</th> <th> Price</th> <th> Description </th> <th> create at </th>
+            <th> img</th> <th> title</th><th> category  </th> <th> Price</th> <th> Description </th> <th> create at </th>
             <th>Actions</th>
         </tr>
 
@@ -14,9 +14,20 @@
         @foreach($posts as $post)
             <tr>
                
-                <td><img width="100"  src="{{asset('images/posts/'.$post->image)}} "/></td>
+                <td><img width="75"  src="{{asset('images/posts/'.$post->image)}} "/></td>
               
                 <td> {{$post->title}}</td>
+                <td>
+                    @if($post->category == 'makeup')
+                    مكياج
+                    @elseif($post->category == 'cure_humans')
+                     علاج البشر
+                    @elseif($post->category == 'makeup_courses')
+                     دورات تعليمية للمكياج
+                    @else
+                    منتجات
+                    @endif
+                </td>
                 <td> {{$post["price"]}}</td>
                 <td> {{$post["description"]}}</td>  
                 <td>{{ $post->created_at->format('d/m/Y H:i:s') }}</td>
@@ -32,9 +43,6 @@
                       
                         <input type="submit" onclick="return confirmDelete()" class="btn btn-danger" value="delete">
                     </form>
-
-           
-
                    
                 </div>
                 </td>
@@ -49,10 +57,9 @@
 
 
         <div class="d-flex justify-content-center">
-        {{ $posts->render('custom-pagination') }}
+        {{ $posts->render('categories.custom-pagination') }}
         </div>
    
-<a class="" aria-current="page" href="{{route('post.create')}}"><button class="btn btn-primary w-25">Add Post</button></a>
 
 
 @endsection
