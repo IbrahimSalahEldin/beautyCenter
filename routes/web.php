@@ -25,7 +25,18 @@ Route::get('/post/detals/{id}', [App\Http\Controllers\HomeController::class, 'sh
 
 
 
-Auth::routes();
+// Auth::routes();
+
+// Login routes
+Route::get('login', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'App\Http\Controllers\Auth\LoginController@login');
+Route::post('logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+// Password reset routes
+Route::get('password/reset', 'App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'App\Http\Controllers\Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'App\Http\Controllers\Auth\ResetPasswordController@reset')->name('password.update');
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('/post', PostController::class)->middleware('auth');
