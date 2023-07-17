@@ -261,7 +261,7 @@
      data-aos-duration="3000">
         <div class="category">
         <a href="{{ route('category', 'products') }}"> 
-          <img src="{{asset('images/staticimg/montagat.jpg')}}" alt="img3"  class="CategoryImage">
+          <img src="{{asset('images/staticimg/products.jpg')}}" alt="img3"  class="CategoryImage">
           <p class="CategoryWord"> 
           منتجات  
              </p>  
