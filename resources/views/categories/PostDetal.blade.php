@@ -21,16 +21,30 @@
      <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}"> -->
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+  
 
   <!-- <link rel="stylesheet" type="text/css" href="resources/css/home.css"> -->
 
-
+  <link 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+  rel="stylesheet" 
+/> 
+<!-- Google Fonts --> 
+<link 
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" 
+  rel="stylesheet" 
+/> 
+<!-- MDB --> 
+<link 
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" 
+  rel="stylesheet" 
+/>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}"/>
 </head>
 <body class="hold-transition sidebar-mini">
   <!-- nav bar -->
 <section class="NavBar" dir="rtl">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-white">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img class="logo" src="{{asset('images/staticimg/logo.png')}}" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +69,7 @@
                   data-aos-anchor="#example-anchor"
                   data-aos-offset="500"
                   data-aos-duration="500">
-            <img width="500" class="imgDetails"  src="{{asset('images/posts/'.$post->image)}} "/>
+            <img  class="imgDetails"  src="{{asset('images/posts/'.$post->image)}} "/>
             </div>
             <div class="row col-md-6 mb-3 col-12 d-flex  align-content-center"data-aos="fade-right"
                 data-aos-offset="300"
@@ -69,11 +83,9 @@
                   {{$post["price"]}}دولار    
                 </p>
                 <form>
-<<<<<<< HEAD:resources/views/PostDetal.blade.php
-                <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">احجز الان</button>
-=======
+
                 <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إحجز الأن</button>
->>>>>>> 65eb55ad4c3ba32a8c93cedb5cc5ae89bfdba1b0:resources/views/categories/PostDetal.blade.php
+
                </form>
             </div>
         </div>
@@ -158,7 +170,10 @@ function sendMessage() {
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-
+    <script 
+  type="text/javascript" 
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js" 
+></script>
 </body>
 </html>
 

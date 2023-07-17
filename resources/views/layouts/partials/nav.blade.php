@@ -39,7 +39,7 @@
      
 
       <div class="image">
-          <img src="{{asset('dist/img/user.jpg')}}" class="img-circle elevation-2" alt="User Image" width="200px" height="200px">
+          <img src="{{asset('dist/img/dashboard.jpeg')}}" class="img-circle elevation-2" alt="User Image" width="200px" height="200px">
         </div>
         <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->

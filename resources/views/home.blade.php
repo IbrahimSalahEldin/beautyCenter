@@ -34,6 +34,21 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
   rel="stylesheet"
 />
+
+<link 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+  rel="stylesheet" 
+/> 
+<!-- Google Fonts --> 
+<link 
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" 
+  rel="stylesheet" 
+/> 
+<!-- MDB --> 
+<link 
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" 
+  rel="stylesheet" 
+/>
     
      <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 
@@ -53,7 +68,7 @@
 
   <!-- nav bar -->
 <section class="NavBar" dir="rtl">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-white">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img class="logo" src="{{asset('images/staticimg/logo.png')}}" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +98,8 @@
   <!-- first section -->
 
 <!-- Carousel wrapper -->
-    <!-- <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+
+    <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
       <div class="carousel-indicators">
         <button
           type="button"
@@ -142,7 +158,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div> -->
+    </div>
 <!-- Carousel wrapper -->
 
   <!-- end first section  -->
@@ -168,51 +184,59 @@
   </section>
   <!-- end second section  -->
 <!-- product section -->
-
-<section class="galary mb-5 pt-3"  dir="rtl">
-  <div class="container d-flex justify-content-center ">
-    <div class="row">
-    <p class="categories text-center">صور</p>
-  <div class="CategoryPhotos col-12 row  d-flex justify-content-around align-items-around">
-
-<div class="col-md-3 col-12 IMG_CON" data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500" >
-      <img src="{{asset('images/staticimg/home1.jpeg')}}" alt="img3" class="GalaryPhoto"  >
-</div>
-<div class="col-md-3 col-12  IMG_CON DIF_CON" data-aos="fade-up"
-     data-aos-duration="3000">
-      <img src="{{asset('images/staticimg/home2.jpeg')}}" alt="img3" class="GalaryPhoto"  >
-
-</div>
-    <div class="col-md-3 col-12 IMG_CON" data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-      <img src="{{asset('images/staticimg/home3.jpeg')}}" alt="img3" class="GalaryPhoto"  >
-
-      </div>
-    </div>
-
-    </div>
-  </div>
-</div>
+<section class="galary mb-5 pt-3"  dir="rtl"> 
+<div class=" d-flex justify-content-center galaryCon"> 
+<div class="row galaryRow"> 
+  <p class="categories text-center">صور</p> 
+  <div class="CategoryPhotos col-12 row "> 
+ 
+    <div class="col-md-4 col-12 IMG_CON d-flex justify-content-center" data-aos="fade-down" 
+     data-aos-easing="linear" 
+     data-aos-duration="1500"> 
+      <img src="{{asset('images/staticimg/home1.jpeg')}}" alt="img3" class="GalaryPhoto"  > 
+    </div> 
+ 
+    <div class="col-md-4 col-10 IMG_CON DIF_CON d-flex justify-content-center" data-aos="fade-up" 
+     data-aos-duration="3000"> 
+      <img src="{{asset('images/staticimg/home2.jpeg')}}" alt="img3" class="GalaryPhoto gallery "  > 
+ 
+    </div> 
+ 
+    <div class="col-md-4 col-10 IMG_CON d-flex justify-content-center" data-aos="fade-down" 
+     data-aos-easing="linear" 
+     data-aos-duration="1500"> 
+      <img src="{{asset('images/staticimg/home3.jpeg')}}" alt="img3" class="GalaryPhoto  gallery"  > 
+ 
+    </div> 
+     
+  </div> 
+ 
+     
+  </div> 
+   
+</div> 
 </section>
+
+
+
+<!-- //////////////////////////////////////////////////////// -->
+
 
 <section id="service">
   <div class="container" dir="rtl">
     <div class="row">
       <p class="categories">خدماتنا</p>
-      <div class="col-lg-3 col-md-6 col-12 mb-3 "  data-aos="fade-up"
+      <div class="col-lg-3 col-md-6 col-11 mb-3 "  data-aos="fade-up"
      data-aos-duration="3000">
         <div class="category">
-        <a href="{{ route('category', 'makeup') }}" >
-          <img src="{{asset('images/staticimg/c1.jpg')}}" alt="img3" class="CategoryImage">
+        <a href="{{ route('category', 'makeup') }}" class="d-flex justify-content-center">
+          <img src="{{asset('images/staticimg/home3.jpeg')}}" alt="img3" class="CategoryImage">
          <p class="CategoryWord"> 
           مكياج</p>
         </a>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-12 mb-3 mt-3 "  data-aos="fade-up"
+      <div class="col-lg-3 col-md-6 col-11 mb-3 mt-3 "  data-aos="fade-up"
      data-aos-duration="3000">
       <div class="category">
       <a href="{{ route('category', 'cure_humans') }}"> 
@@ -222,7 +246,7 @@
             </a> 
         </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-12 mb-3 "  data-aos="fade-up"
+        <div class="col-lg-3 col-md-6 col-11 mb-3 "  data-aos="fade-up"
      data-aos-duration="3000">
         <div class="category">
         <a href="{{ route('category', 'makeup_courses') }}">
@@ -233,7 +257,7 @@
           </a> 
         </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-12 mb-3 mt-3 "  data-aos="fade-up"
+        <div class="col-lg-3 col-md-6 col-11 mb-3 mt-3 "  data-aos="fade-up"
      data-aos-duration="3000">
         <div class="category">
         <a href="{{ route('category', 'products') }}"> 
@@ -275,34 +299,18 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href=" https://linktr.ee/faihamekup?utm_source=linktree_profile_share" role="button"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
-
       <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/fihaaakary?igshid=OGIzYTJhMTRmYQ==" role="button"
         ><i class="fab fa-instagram"></i
       ></a>
 
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
+      
 
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-github"></i
-      ></a>
+      
     </section>
     <!-- Section: Social media -->
   </div>
@@ -350,6 +358,9 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-
+    <script 
+  type="text/javascript" 
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js" 
+></script>
 </body>
 </html>
