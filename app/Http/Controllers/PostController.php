@@ -67,7 +67,7 @@ class PostController extends Controller
         if ($post) {
             return view("post.view", ['post' => $post]);
         }
-        return ;
+        abort(404); ;
     }
 
     /**
@@ -123,7 +123,6 @@ class PostController extends Controller
             }
         }
         $post->delete();
-        // return to_route("posts.index")->with('success', 'Post has been deleted successfully');
         return back()->with('success', 'Post has been deleted successfully');
     }
 }
