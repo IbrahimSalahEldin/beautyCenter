@@ -172,7 +172,7 @@
              مرحبا بكم في مركز فيحاء للتجميل 
           </h2>
           <p >
-          يقوم الطبيب المختص بمعاينة الحالة وفحصها جيداً قبل العملية، ومن ثم يتم تجهيزها وتحضيرها لبدء عملية التنظيف. يلجأ الطبيب أثناء العملية إلى استعمال ذراع خاصة أو عصا في سبيل التخلص من الأوساخ المتراكمة في أعماق مسامات الجلد، والخلايا التالفة والميتة، والدهون المتراكمة.
+          مركز وصالون متخصص في العناية بالجمال للمرأة يوفر كافة خدمات العناية بالبشرة والمكياج وكل ما تحتاجه المرأة للعناية بجمالها.
           </p>
         </div>
         <div class="col-12 col-md-5 mb-3" data-aos="fade-left">
@@ -250,7 +250,7 @@
      data-aos-duration="3000">
         <div class="category">
         <a href="{{ route('category', 'makeup_courses') }}">
-          <img src="{{asset('images/staticimg/c3.jpg')}}" alt="img3"  class="CategoryImage">
+          <img src="{{asset('images/staticimg/course.jpeg')}}" alt="img3"  class="CategoryImage">
           <p class="CategoryWord"> 
           دورات تعليمية للمكياج
              </p> 
@@ -276,7 +276,7 @@
 <section class="contactSection pt-4 mb-3 mt-5" dir="rtl">
     <div class="container d-flex justify-content-center">
       <div class="row">
-        <p class="titleContact">اكتب استفسارك الآن</p>
+        <p class="titleContact">للتواصل عن طريق واتسب</p>
         <div class="col-12 message">
           <form>
             <div class="mb-3 p-5 d-flex justify-content-center">
@@ -335,7 +335,7 @@
   <script>
     function sendMessage() {
       var inputText = document.getElementById("inputText").value;
-      var phoneNumber = "0556883088"; // رقم الواتساب في مصر
+      var phoneNumber = "+972054-5979912"; // رقم الواتساب في مصر
       var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(inputText);
       window.open(whatsappURL, "_blank");
     }
