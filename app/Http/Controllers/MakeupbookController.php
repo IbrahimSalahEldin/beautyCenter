@@ -19,7 +19,7 @@ class MakeupbookController extends Controller
    
     public function create()
     {
-        return view('books.create');
+        return view( 'books.create');
     }
 
    
@@ -38,7 +38,7 @@ class MakeupbookController extends Controller
         $book->description= $book_info['description'];
         
         $book->save();
-        return to_route("books.index");
+        return to_route("book.index");
     }
 
     
@@ -50,7 +50,7 @@ class MakeupbookController extends Controller
    
     public function edit(makeupbook $makeupbook)
     {
-         return view('books.edit', ['book' => $makeupbook]);
+         return view('book.edit', ['book' => $makeupbook]);
     }
 
     
@@ -71,7 +71,7 @@ class MakeupbookController extends Controller
         $makeupbook->description = $book_info['description'];
       
         $makeupbook->save();
-        return to_route("books.index");   
+        return to_route("book.index");   
     }
 
    
