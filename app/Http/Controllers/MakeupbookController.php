@@ -50,7 +50,7 @@ class MakeupbookController extends Controller
    
     public function edit(makeupbook $makeupbook)
     {
-         return view('book.edit', ['book' => $makeupbook]);
+         return view('books.edit', ['book' => $makeupbook]);
     }
 
     
