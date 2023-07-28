@@ -25,7 +25,7 @@
                     <a class="w-100" aria-current="page" href="{{route('book.edit', $book->id)}}"><button class="btn btn-primary ">Edit</button></a>
                   
              
-                    <form action="{{route('book.destroy', $book->id)}}" method="book">
+                    <form action="{{route('book.destroy', $book->id)}}" method="post">
                         @method('delete')
                         @csrf
                       

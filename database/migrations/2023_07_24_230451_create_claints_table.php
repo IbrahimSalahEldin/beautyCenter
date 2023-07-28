@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('claints', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('makeupbook_id')->nullable()->constrained('makeupbooks')->onDelete('set null');
+            $table->foreignId('book_id')->nullable()->constrained('books')->onDelete('set null');
             $table->string('name');
             $table->string('email');
             $table->timestamps();

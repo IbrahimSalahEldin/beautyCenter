@@ -10,7 +10,7 @@
 
 
 
-<form method="book" action="{{ route('book.update', ['book' => $book->id]) }}" enctype="multipart/form-data">
+<form method="post" action="{{route('book.update', $book->id)}}" enctype="multipart/form-data">
     @csrf
     @method('put')
 

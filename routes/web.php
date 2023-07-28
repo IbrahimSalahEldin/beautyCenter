@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\MakeupbookController;
 use App\Http\Controllers\MBookController;
 use App\Http\Controllers\PostController;
@@ -36,7 +37,7 @@ Route::post('logout', 'App\Http\Controllers\Auth\LoginController@logout')->name(
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('/post', PostController::class);
-    Route::resource('/book', MBookController::class);
+    Route::resource('/book', BookController::class);
     Route::get('claint', [ClaintController::class, 'index'])->name('claint.index');
     Route::get('/claint/{claint}', [ClaintController::class, 'show'])->name('claint.show');
     Route::get('/claint/{claint}/edit', [ClaintController::class, 'edit'])->name('claint.edit');
