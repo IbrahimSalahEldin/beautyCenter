@@ -8,8 +8,8 @@
     @csrf
     @method('post')
 
-    <input type="text" class="form-control" name="book" 
-    value="{{old('book')}}"
+    <input type="text" class="form-control" name="book_id" 
+    value="{{old('book_id')}}"
     id="exampleInputEmail1" aria-describedby="emailHelp" hidden>
 
 

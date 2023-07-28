@@ -5,32 +5,35 @@
 
     <table class="table mt-2 rounded-3" style="color:black; border: 5px solid gray; border-radius:5px;">
   
-        <tr>
-            <th> img</th> <th> title</th><th> Price</th> <th> Description </th> <th> create at </th>
+    <tr>
+            <th> name</th> <th> email</th>
             <th>Actions</th>
         </tr>
 
 
-        @foreach($claints as $claint)
-            <tr>
-               
-                <td><img width="75"  src="{{asset('images/claints/'.$claint->image)}} "/></td>
-              
-                <td> {{$claint->name}}</td>
-                <td> {{$claint["email"]}}</td>
-                <td> {{$claint["description"]}}</td>  
-                
-                <td>
-                    <div class="d-flex justify-content-center">
-                    <a class="w-100" aria-current="page" href="{{route('claint.edit', $claint->id)}}"><button class="btn btn-primary ">Edit</button></a>
-                  
-             
+        @foreach ($clients as $client)
+                <tr>
                    
+                    <td>{{ $client->name }}</td>
+                    <td>{{ $client->email }}</td>
                    
-                </div>
-                </td>
-            </tr>
-           
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <a class="w-100" aria-current="page" href="{{ route('client.edit', $client->id) }}">
+                                <button class="btn btn-primary">Edit</button>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                @foreach ($client->books as $book)
+                    <tr>
+                        <td><img width="75" src="{{ asset('images/books/'.$book->image) }}"></td>
+                        <td>{{ $book->title }}</td>
+                        <td>{{ $book->price }}</td>
+                        <td>{{ $book->description }}</td>
+                        
+                    </tr>
+                @endforeach
         @endforeach
 
 
