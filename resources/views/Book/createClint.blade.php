@@ -1,15 +1,11 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container d-flex mt-5 justify-content-center bg-white" style="color:black;"> 
-    <div class="row w-75">
 
     <form action="{{ route('claint.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('post')
 
     <input type="text" class="form-control" name="book" 
-    value="{{old('book')}}"
+    value="{{old('boot')}}"
     id="exampleInputEmail1" aria-describedby="emailHelp" hidden>
 
 
@@ -43,4 +39,3 @@
     </div>
 </div>
 
-@endsection
