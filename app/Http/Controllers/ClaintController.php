@@ -84,19 +84,17 @@ class ClaintController extends Controller
 
     
     
-public function update(Request $request, claint $client)
+public function update(Request $request, claint $claint)
 {
-    // Validate the request data
-   
     $request->validate([
         'name' => 'required|string',
         'email' => 'required|email',
-        'book_id' => 'required|exists:books,id', // Ensure the book_id exists in the books table
+        'book_id' => 'required|exists:books,id',
     ]);
     
 
-    // Update the client's details
-    $client->update([
+    
+    $claint->update([
         'name' => $request->name,
         'email' => $request->email,
     ]);
@@ -105,20 +103,12 @@ public function update(Request $request, claint $client)
     $book = Book::find($request->book_id);
 
     
-    $client->books()->sync([$book->id]);
+    $claint->books()->sync([$book->id]);
    
     return redirect()->route('claint.index')->with('success', 'Client updated successfully.');
 }
 
 
-
-
-
-
-
-    /**
-     * Remove the specified resource from storage.
-     */
 
     public function destroy(claint $claint)
     {   
