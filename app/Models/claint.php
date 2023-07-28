@@ -13,8 +13,9 @@ class claint extends Model
         'book_id' , 'name', 'email'
    ];
 
-   public function books(){
-      return $this->hasMany(Book::class, 'id', $this->id);
+   public function books()
+   {
+       return $this->belongsToMany(Book::class, 'claint_book', 'claint_id', 'book_id');
    }
    
 }

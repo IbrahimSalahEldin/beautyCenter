@@ -14,9 +14,10 @@ class Book extends Model
         'title' ,'description' , 'price'
    ];
 
-   public function clients(){
-    return $this->hasMany(claint::class, 'book_id', 'id');
-   }
+   public function claints()
+    {
+        return $this->belongsToMany(claint::class, 'claint_book', 'book_id', 'claint_id');
+    }
    
 
 }

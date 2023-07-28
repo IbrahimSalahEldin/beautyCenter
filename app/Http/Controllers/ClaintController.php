@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
 use App\Models\Book;
 use App\Models\claint;
@@ -35,17 +36,33 @@ class ClaintController extends Controller
      * Store a newly created resource in storage.
      */
 
-    public function store(StoreclaintRequest $request)
-    {
-        $clinte_info= request()->all();
-        $clinte = new claint();
-        $clinte->book_id= $clinte_info['book_id'];
-        $clinte->name= $clinte_info['name'];
-        $clinte->email= $clinte_info['email'];
-        $clinte->save();
-        return to_route("claint.index");
-    }
-
+     
+     
+     public function store(Request $request)
+     {
+        
+         $request->validate([
+             'name' => 'required|string',
+             'email' => 'required|email',
+             'book_id' => 'required|exists:books,id', 
+         ]);
+     
+         // Create the new client
+         $client = claint::create([
+             'name' => $request->name,
+             'email' => $request->email,
+         ]);
+     
+         // Get the book based on the input book_id
+         $book = Book::find($request->book_id);
+     
+         // Associate the book with the client
+         $client->books()->attach($book->id);
+     
+         
+         return redirect()->route('claint.index')->with('success', 'Client created successfully.');
+     }
+     
     /**
      * Display the specified resource.
      */
@@ -61,22 +78,43 @@ class ClaintController extends Controller
 
     public function edit(claint $claint)
     {
+       
         return view('claints.edit', ['claint' => $claint]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    
+    
+public function update(Request $request, claint $client)
+{
+    // Validate the request data
+   
+    $request->validate([
+        'name' => 'required|string',
+        'email' => 'required|email',
+        'book_id' => 'required|exists:books,id', // Ensure the book_id exists in the books table
+    ]);
+    
 
-    public function update(UpdateclaintRequest $request, claint $claint)
-    {
-        $claint_info= request()->all();
-        $claint->book_id= $claint_info['book_id'];
-        $claint->name= $claint_info['name'];
-        $claint->email= $claint_info['email'];
-        $claint->save();
-        return to_route("claint.index");
-    }
+    // Update the client's details
+    $client->update([
+        'name' => $request->name,
+        'email' => $request->email,
+    ]);
+  
+    
+    $book = Book::find($request->book_id);
+
+    
+    $client->books()->sync([$book->id]);
+   
+    return redirect()->route('claint.index')->with('success', 'Client updated successfully.');
+}
+
+
+
+
+
+
 
     /**
      * Remove the specified resource from storage.

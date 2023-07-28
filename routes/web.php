@@ -33,7 +33,7 @@ Route::get('/book/detals/{id}', [App\Http\Controllers\HomeController::class, 'bo
 Route::get('/claint/create', [ClaintController::class, 'create'])->name('claint.create');
 Route::post('/claint', [ClaintController::class, 'store'])->name('claint.store');
 
-
+// Auth::routes();
 
 Route::get('login', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'App\Http\Controllers\Auth\LoginController@login');
