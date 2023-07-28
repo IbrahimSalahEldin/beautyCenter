@@ -12,6 +12,9 @@
     <li class="nav-item d-none d-sm-inline-block">
       <a href="{{route('post.create')}}" class="nav-link text-white">Create post</a>
     </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="{{route('book.create')}}" class="nav-link text-white">Create Book</a>
+    </li>
   </ul>
 
   <!-- Right navbar links -->
