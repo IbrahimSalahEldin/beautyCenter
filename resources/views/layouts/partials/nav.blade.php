@@ -13,7 +13,7 @@
       <a href="{{route('book.index')}}" class="nav-link text-white">Books</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="{{route('clinte.index')}}" class="nav-link text-white">Clintes</a>
+      <a href="{{route('claint.index')}}" class="nav-link text-white">Clintes</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <a href="{{route('post.create')}}" class="nav-link text-white">Create post</a>
