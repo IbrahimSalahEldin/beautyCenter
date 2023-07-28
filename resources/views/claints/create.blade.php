@@ -71,12 +71,12 @@
     <form action="{{ route('claint.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('post')
-
+<!-- 
     <input type="text" class="form-control" name="book_id" 
     value="{{old('book_id')}}"
-    id="exampleInputEmail1" aria-describedby="emailHelp" >
-
-
+    id="exampleInputEmail1" aria-describedby="emailHelp" hidden >
+ -->
+ <input type="hidden" name="book_id" value="{{ $book_id}}" />
 
 
   

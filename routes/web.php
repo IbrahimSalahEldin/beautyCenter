@@ -28,9 +28,10 @@ Route::get('/category/{category}', [App\Http\Controllers\HomeController::class, 
 Route::get('/post/detals/{id}', [App\Http\Controllers\HomeController::class, 'show'])->name('post.detal');
 
 Route::get('/books', [App\Http\Controllers\HomeController::class, 'books'])->name('books');
+Route::get('/success', [App\Http\Controllers\HomeController::class, 'success'])->name('success');
 Route::get('/book/detals/{id}', [App\Http\Controllers\HomeController::class, 'bookDetals'])->name('book.detal');
 
-Route::get('/claint/create', [ClaintController::class, 'create'])->name('claint.create');
+Route::get('/claint/{id}/create', [ClaintController::class, 'create'])->name('claint.create');
 Route::post('/claint', [ClaintController::class, 'store'])->name('claint.store');
 
 // Auth::routes();

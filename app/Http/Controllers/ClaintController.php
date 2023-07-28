@@ -27,9 +27,9 @@ class ClaintController extends Controller
      * Show the form for creating a new resource.
      */
 
-    public function create()
+    public function create($book)
     {
-        return view('claints.create');
+        return view('claints.create',['book_id' => $book]);
     }
 
     /**
@@ -60,7 +60,7 @@ class ClaintController extends Controller
          $client->books()->attach($book->id);
      
          
-         return redirect()->route('claint.index')->with('success', 'Client created successfully.');
+         return redirect()->route('success')->with('success', 'Client created successfully.');
      }
      
     /**
@@ -89,7 +89,6 @@ public function update(Request $request, claint $claint)
     $request->validate([
         'name' => 'required|string',
         'email' => 'required|email',
-        'book_id' => 'required|exists:books,id',
     ]);
     
 
@@ -100,10 +99,10 @@ public function update(Request $request, claint $claint)
     ]);
   
     
-    $book = Book::find($request->book_id);
+    // $book = Book::find($request->book_id);
 
     
-    $claint->books()->sync([$book->id]);
+    // $claint->books()->sync([$book->id]);
    
     return redirect()->route('claint.index')->with('success', 'Client updated successfully.');
 }

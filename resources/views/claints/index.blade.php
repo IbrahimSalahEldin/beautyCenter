@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- <a class=""  aria-current="page" href="{{route('claint.create')}}"><button class="btn btn-primary w-25">Add Claint</button></a> -->
 
     <table class="table mt-2 rounded-3" style="color:black; border: 5px solid gray; border-radius:5px;">
   
     <tr>
             <th> name</th> <th> email</th>
-            <th>Actions</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
         </tr>
 
 
@@ -23,6 +23,19 @@
                                 <button class="btn btn-primary">Edit</button>
                             </a>
                         </div>
+                       
+                   
+                    </td>
+                    <td>
+                       
+                        <div class="d-flex justify-content-center">
+                        <form action="{{route('claint.destroy', $client->id)}}" method="post">
+                        @method('delete')
+                        @csrf
+                      
+                        <input type="submit" onclick="return confirmDelete()" class="btn btn-danger" value="delete">
+                    </form>
+                    </div>
                     </td>
                 </tr>
                 @foreach ($client->books as $book)
@@ -49,6 +62,6 @@
 
 <script>
     function confirmDelete() {
-        return confirm("Are you sure you want to delete this book?");
+        return confirm("Are you sure you want to delete this Claint?");
     }
 </script>

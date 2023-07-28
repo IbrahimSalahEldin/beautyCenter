@@ -82,9 +82,12 @@
                 <p class="salary">
                   {{$book["price"]}}دولار    
                 </p>
+                <a href="{{ route('claint.create', ['id' => $book->id]) }}" class="btn m-2 Mybtn">إحجز الأن</a>
+
+
                 <form>
 
-                <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إحجز الأن</button>
+                <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()"> تواصل معنا عبر الوتساب</button>
 
                </form>
             </div>
