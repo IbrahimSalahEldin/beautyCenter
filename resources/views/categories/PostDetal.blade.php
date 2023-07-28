@@ -39,7 +39,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" 
   rel="stylesheet" 
 />
-<link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
 </head>
 <body class="hold-transition sidebar-mini">
   <!-- nav bar -->
@@ -149,7 +149,7 @@
 
 <script>
 function sendMessage() {
-  var phoneNumber = "0556883088";
+  var phoneNumber = "054-5979912";
   var message = "مرحبًا، أود أن أستفسر عن المنتج: {{$post->title}} - السعر: {{$post['price']}} دولار";
 
   var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
