@@ -10,7 +10,7 @@
 
     <input type="text" class="form-control" name="book_id" 
     value="{{old('book_id')}}"
-    id="exampleInputEmail1" aria-describedby="emailHelp" hidden>
+    id="exampleInputEmail1" aria-describedby="emailHelp" >
 
 
 

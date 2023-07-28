@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use App\Models\claint;
 use App\Http\Requests\StoreclaintRequest;
 use App\Http\Requests\UpdateclaintRequest;
@@ -15,9 +16,15 @@ class ClaintController extends Controller
 
     public function index()
     {
-        $claints = claint::with('books')->get();
-        
-        return view("claints.index" , ['claints'=>$claints]);
+        $claints = claint::paginate(5);
+
+        // Get all book IDs associated with claints
+        $bookIds = $claints->pluck('book_id');
+    
+        // Retrieve all books using the IDs
+        $books = Book::whereIn('id', $bookIds)->get();
+    
+        return view("claints.index", ['claints' => $claints, 'books' => $books]);
     }
 
     /**
@@ -41,7 +48,7 @@ class ClaintController extends Controller
         $clinte->name= $clinte_info['name'];
         $clinte->email= $clinte_info['email'];
         $clinte->save();
-        return to_route("claints.index");
+        return to_route("claint.index");
     }
 
     /**
@@ -73,7 +80,7 @@ class ClaintController extends Controller
         $claint->name= $claint_info['name'];
         $claint->email= $claint_info['email'];
         $claint->save();
-        return to_route("claints.index");
+        return to_route("claint.index");
     }
 
     /**

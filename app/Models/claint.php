@@ -13,8 +13,8 @@ class claint extends Model
         'book_id' , 'name', 'email'
    ];
 
-   public function books(){
-    return $this->hasMany(Book::class, 'book_id', 'id');
-   }
+//    public function books(){
+//       return $this->hasMany(Book::class, 'id', $this->id);
+//    }
    
 }

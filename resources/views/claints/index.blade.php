@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<a class=""  aria-current="page" href="{{route('book.create')}}"><button class="btn btn-primary w-25">Add Book</button></a>
+<a class=""  aria-current="page" href="{{route('claint.create')}}"><button class="btn btn-primary w-25">Add Claint</button></a>
 
     <table class="table mt-2 rounded-3" style="color:black; border: 5px solid gray; border-radius:5px;">
   
@@ -11,7 +11,7 @@
         </tr>
 
 
-        @foreach ($clients as $client)
+        @foreach ($claints as $client)
                 <tr>
                    
                     <td>{{ $client->name }}</td>
@@ -19,13 +19,13 @@
                    
                     <td>
                         <div class="d-flex justify-content-center">
-                            <a class="w-100" aria-current="page" href="{{ route('client.edit', $client->id) }}">
+                            <a class="w-100" aria-current="page" href="{{ route('claint.edit', $client->id) }}">
                                 <button class="btn btn-primary">Edit</button>
                             </a>
                         </div>
                     </td>
                 </tr>
-                @foreach ($client->books as $book)
+                @foreach ($books as $book)
                     <tr>
                         <td><img width="75" src="{{ asset('images/books/'.$book->image) }}"></td>
                         <td>{{ $book->title }}</td>
