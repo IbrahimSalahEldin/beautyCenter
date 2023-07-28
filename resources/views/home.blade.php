@@ -168,15 +168,15 @@
     <div class="container">
       <div class="row d-flex justify-content-around">
         <div class=" col-md-5 col-12 data mb-3 row d-flex justify-content-center align-items-center text-center" data-aos="fade-right">
-          <h2 >
+          <p class="fs-1 fw-bold">
              مرحبا بكم في مركز فيحاء للتجميل 
-          </h2>
-          <p >
-          مركز وصالون متخصص في العناية بالجمال للمرأة يوفر كافة خدمات العناية بالبشرة والمكياج وكل ما تحتاجه المرأة للعناية بجمالها.
+          </p>
+          <p class="fs-2">
+          مركز وصالون متخصص في العناية بالجمال للمرأة يوفر كافة خدمات العناية بالبشرة والمكياج وكل ما تحتاجه للعناية بجمالها عن طريق مواكبة أحدث الطرق والأدوات لتحصل على العناية الكاملة والخدمة المميزة في مكان واحد يتمتع بالهدوء والخصوصية والاهتمام
           </p>
         </div>
         <div class="col-12 col-md-5 mb-3" data-aos="fade-left">
-            <img class="image2" src="{{asset('images/staticimg/wo5.jpg')}} " alt="img2">
+            <img class="image2 w-75" src="{{asset('images/staticimg/fyhaa2.jpeg')}} " alt="img2">
         </div>
 
       </div>
@@ -257,13 +257,26 @@
           </a> 
         </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-11 mb-3 mt-3 "  data-aos="fade-up"
+<div class="col-lg-3 col-md-6 col-11 mb-3 mt-3 "  data-aos="fade-up"
      data-aos-duration="3000">
         <div class="category">
         <a href="{{ route('category', 'products') }}"> 
           <img src="{{asset('images/staticimg/products.jpg')}}" alt="img3"  class="CategoryImage">
           <p class="CategoryWord"> 
           منتجات  
+             </p>  
+          </a>
+        </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 col-11 mb-3 mt-3 "  data-aos="fade-up"
+     data-aos-duration="3000">
+        <div class="category">
+        <a href="{{ route('category', 'products') }}"> 
+          <img src="{{asset('images/staticimg/makeupBooks.jfif')}}" alt="img3"  class="CategoryImage">
+          <p class="CategoryWord"> 
+      كتيبات المكياج 
              </p>  
           </a>
         </div>
