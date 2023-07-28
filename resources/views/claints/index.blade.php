@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<a class=""  aria-current="page" href="{{route('claint.create')}}"><button class="btn btn-primary w-25">Add Claint</button></a>
+<!-- <a class=""  aria-current="page" href="{{route('claint.create')}}"><button class="btn btn-primary w-25">Add Claint</button></a> -->
 
     <table class="table mt-2 rounded-3" style="color:black; border: 5px solid gray; border-radius:5px;">
   
