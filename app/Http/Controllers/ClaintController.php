@@ -16,15 +16,10 @@ class ClaintController extends Controller
 
     public function index()
     {
-        $claints = claint::paginate(5);
+        $claints = claint::with('books')->paginate(5);
 
-        // Get all book IDs associated with claints
-        $bookIds = $claints->pluck('book_id');
-    
-        // Retrieve all books using the IDs
-        $books = Book::whereIn('id', $bookIds)->get();
-    
-        return view("claints.index", ['claints' => $claints, 'books' => $books]);
+       
+        return view("claints.index", ['claints' => $claints]);
     }
 
     /**

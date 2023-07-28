@@ -25,7 +25,7 @@
                         </div>
                     </td>
                 </tr>
-                @foreach ($books as $book)
+                @foreach ($client->books as $book)
                     <tr>
                         <td><img width="75" src="{{ asset('images/books/'.$book->image) }}"></td>
                         <td>{{ $book->title }}</td>

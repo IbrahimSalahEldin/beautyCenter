@@ -4,7 +4,8 @@
 <div class="container d-flex mt-5 justify-content-center bg-white" style="color:black;"> 
     <div class="row w-75">
 
-    <form action="{{ route('claint.update') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('claint.update', ['claint' => $claint->id]) }}" method="POST">
+
     @csrf
     @method('put')
 
