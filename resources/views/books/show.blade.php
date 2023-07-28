@@ -31,9 +31,7 @@
    
 
 
-        <div class="d-flex justify-content-center">
-        {{ $books->render('categories.custom-pagination') }}
-        </div>
+        
 @endsection
 
 <script>

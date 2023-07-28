@@ -10,6 +10,9 @@
       <a href="{{route('post.index')}}" class="nav-link text-white">Posts</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
+      <a href="{{route('book.index')}}" class="nav-link text-white">Books</a>
+    </li>
+    <li class="nav-item d-none d-sm-inline-block">
       <a href="{{route('post.create')}}" class="nav-link text-white">Create post</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">

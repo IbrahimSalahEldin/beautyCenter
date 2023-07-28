@@ -42,47 +42,48 @@ class MakeupbookController extends Controller
     }
 
     
-    public function show(makeupbook $makeupbook)
+    public function show(makeupbook $book)
     {
-        return view("books.show", ['book' => $makeupbook]);
+        return view("books.show", ['book' => $book]);
     }
 
    
-    public function edit(makeupbook $makeupbook)
+    public function edit(makeupbook $book)
     {
-         return view('books.edit', ['book' => $makeupbook]);
+         return view('books.edit', ['book' => $book]);
     }
 
     
-    public function update(UpdatemakeupbookRequest $request, makeupbook $makeupbook)
+    public function update(UpdatemakeupbookRequest $request, makeupbook $book)
     {
         $book_info= request()->all();
         $img =request()->image;
         if($img){
-            if($makeupbook->image && (public_path('images/books/' . $makeupbook->image))){
-                unlink(public_path('images/books/' . $makeupbook->image));
+            if($book->image && (public_path('images/books/' . $book->image))){
+                unlink(public_path('images/books/' . $book->image));
             }
             $img_name = time().'.' .$img->extension();
-            $makeupbook->image = $img_name;
+            $book->image = $img_name;
             $img->move(public_path('images/books'), $img_name);
         }
-        $makeupbook->title= $book_info['title'];
-        $makeupbook->price= $book_info['price'];
-        $makeupbook->description = $book_info['description'];
+        $book->title= $book_info['title'];
+        $book->price= $book_info['price'];
+        $book->description = $book_info['description'];
       
-        $makeupbook->save();
-        return to_route("book.index");   
+        $book->save();
+
+        return to_route("book.index");
     }
 
    
-    public function destroy(makeupbook $makeupbook)
+    public function destroy(makeupbook $book)
     {
-        if($makeupbook->image){
+        if($book->image){
             try {
-                unlink(public_path('images/books/'.$makeupbook->image));
+                unlink(public_path('images/books/'.$book->image));
             } catch (\Throwable $th){}
         }
-        $makeupbook->delete();
+        $book->delete();
         return back()->with('success', 'Book has been delete successfully');
     }
 }
