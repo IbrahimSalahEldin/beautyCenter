@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class makeupbook extends Model
+class M_book extends Model
 {
     use HasFactory;
 
