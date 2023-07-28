@@ -14,7 +14,7 @@ class claint extends Model
    ];
 
    public function books(){
-    return $this->hasMany(makeupbook::class, 'makeupbook_id', 'id');
+    return $this->hasMany(Book::class, 'book_id', 'id');
    }
    
 }
