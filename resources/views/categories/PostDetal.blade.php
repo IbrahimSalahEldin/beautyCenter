@@ -62,7 +62,7 @@
     </div>
   </nav>
 </section>
-<section class="details pt-5 mt-5 mb-5 pb-5" dir="rtl">
+<!-- <section class="details pt-5 mt-5 mb-5 pb-5" dir="rtl">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-12 mb-3" data-aos="fade-left"
@@ -87,6 +87,34 @@
                 <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إحجز الأن</button>
 
                </form>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="details pt-5 mt-5 mb-5 pb-5" dir="rtl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12 mb-3" data-aos="fade-left"
+                  data-aos-anchor="#example-anchor"
+                  data-aos-offset="500"
+                  data-aos-duration="500">
+                <img  class="imgDetails"  src="{{asset('images/posts/'.$post->image)}}"/>
+            </div>
+            <div class="row col-md-6 mb-3 col-12 d-flex  align-content-center" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
+                @if($post->category == "makeup") <!-- Display only title and description for "makeup" category -->
+                    <h1>{{$post->title}}</h1>
+                @else
+                    <h1>{{$post->title}}</h1>
+                    <p>{{$post["description"]}}</p>
+                    <p class="salary">{{$post["price"]}}دولار</p>
+                    @endif
+                    <form>
+                        <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إحجز الأن</button>
+                    </form>
+               
             </div>
         </div>
     </div>

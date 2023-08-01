@@ -9,35 +9,20 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-
-    //  public function __construct()
-    //  {
-    //      $this->middleware('auth');
-    //  }
-
+   
     public function index()
     {
-
         $posts = Post::paginate(5);
-
-        
         return view("post.index" , ['posts'=>$posts]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    
     public function create()
     {
         return view('post.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+   
     public function store(StorePostRequest $request)
     { 
         $post_info= request()->all();
@@ -58,9 +43,7 @@ class PostController extends Controller
         return to_route("post.index");
     }
 
-    /**
-     * Display the specified resource.
-     */
+    
     public function show(string  $id_post)
     {
         $post = Post::where('id', $id_post)->first();
@@ -70,9 +53,7 @@ class PostController extends Controller
         abort(404); ;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    
     public function edit(Post $post)
     {
        if($post){
@@ -80,13 +61,9 @@ class PostController extends Controller
        }else {
           abort(404);
       }
-       
-        
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+   
     public function update(UpdatePostRequest $request, string $id)
     {
         $post_info= request()->all();
