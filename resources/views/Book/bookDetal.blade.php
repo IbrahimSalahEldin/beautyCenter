@@ -71,7 +71,7 @@
                   data-aos-duration="500">
             <img  class="imgDetails"  src="{{asset('images/books/'.$book->image)}} "/>
             </div>
-            <div class="row col-md-6 mb-3 col-12 d-flex  align-content-center"data-aos="fade-right"
+            <div class="row col-md-6 mb-3 col-12 d-flex align-content-center"data-aos="fade-right"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine" >
                 <h1>
@@ -85,11 +85,10 @@
                 <a href="{{ route('claint.create', ['id' => $book->id]) }}" class="btn m-2 Mybtn">إحجز الأن</a>
 
 
-                <form>
+               
 
-                <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()"> تواصل معنا عبر الوتساب</button>
+                <a  class="btn m-2 Mybtn " onclick="sendMessage()"> تواصل معنا عبر الوتساب</a>
 
-               </form>
             </div>
         </div>
     </div>

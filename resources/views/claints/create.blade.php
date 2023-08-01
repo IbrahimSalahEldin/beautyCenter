@@ -68,7 +68,7 @@
 <div class="container d-flex mt-5 justify-content-center bg-white" style="color:black;"> 
     <div class="row w-75">
 
-    <form action="{{ route('claint.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('claint.store') }}" method="POST" enctype="multipart/form-data" dir="rtl">
     @csrf
     @method('post')
 <!-- 
@@ -81,20 +81,20 @@
 
   
   <div class="form-group mt-3">
-    <label for="exampleInputEmail">name</label>
+    <label for="exampleInputEmail">الاسم</label>
     <input type="text" class="form-control" name="name" 
     value="{{old('name')}}"
-    id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter name">
+    id="exampleInputEmail" aria-describedby="emailHelp" placeholder="ادخل الاسم بالكامل" >
   </div>
   @error('name')
   <div class="alert alert-danger">{{$message}}</div>
   @enderror
   
   <div class="form-group mt-3">
-    <label for="exampleInputEmail">email</label>
+    <label for="exampleInputEmail">الايميل</label>
     <input type="email" class="form-control" name="email" 
     value="{{old('email')}}"
-    id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+    id="exampleInputEmail" aria-describedby="emailHelp" placeholder="ادخل الايميل">
   </div>
   @error('email')
   <div class="alert alert-danger">{{$message}}</div>
@@ -102,7 +102,7 @@
 
   
   
-  <button type="submit" class="btn btn-primary mt-3" >Create</button>
+  <button type="submit" class="btn btn-primary mt-3" >سجل الان</button>
 </form>
     </div>
 </div>
