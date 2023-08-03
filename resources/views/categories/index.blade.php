@@ -176,7 +176,7 @@
                         @php
                         $displayedSubcategories[] = $post->subcategory;
                         @endphp
-                        <a href="{{ route('category.subcategory', ['subcategory' => $post->id]) }}">
+                        <a href="{{ route('category.subcategory', ['subcategory' => $post->subcategory]) }}">
                             <p class="serviceTitle">{{ $post->subcategory }}</p>
                         </a>
                     @endif

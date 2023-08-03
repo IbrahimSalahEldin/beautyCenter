@@ -53,6 +53,7 @@ class HomeController extends Controller
     {
         $posts = Post::where('subcategory', $subcategory)->paginate(5);
         return view('categories.brand', compact('posts'));
+
     }
 
     public function books()
