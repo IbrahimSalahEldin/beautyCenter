@@ -21,7 +21,7 @@
                     @if($post->category == 'makeup')
                     مكياج
                     @elseif($post->category == 'cure_humans')
-                     علاج البشر
+                    علاج البشرة
                     @elseif($post->category == 'makeup_courses')
                      دورات تعليمية للمكياج
                     @else

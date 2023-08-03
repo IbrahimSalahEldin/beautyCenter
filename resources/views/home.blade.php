@@ -80,9 +80,9 @@
           <li class="nav-item">
             <a class="nav-link " aria-current="page" href="#home">الصفحة الرئيسية</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link " aria-current="page" href="{{route('books')}}"> الكتب  </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="#about"> اقرأ عنا  </a>
           </li>
@@ -103,64 +103,17 @@
 <!-- Carousel wrapper -->
 
     <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-mdb-target="#carouselBasicExample"
-          data-mdb-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-mdb-target="#carouselBasicExample"
-          data-mdb-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-mdb-target="#carouselBasicExample"
-          data-mdb-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
+     
 
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="{{asset('images/staticimg/wo2.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
-          <div class="carousel-caption d-none d-md-block">
-            <p class="beatyTitle">مرحبا بكم في مركز تجميل
-              <br>
-              <span class="fay7aa"> ف</span>يحاء</p>
-          </div>
+          <img src="{{asset('images/staticimg/paner.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
+          
         </div>
 
-        <div class="carousel-item">
-        <img src="{{asset('images/staticimg/wo3.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
-        <div class="carousel-caption d-none d-md-block">
-          <p class="beatyTitle">كوني متألقة ومشرقة 
-              </p>
-          </div>
-        </div>
+    
 
-        <div class="carousel-item">
-        <img src="{{asset('images/staticimg/women1.png')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
-        <div class="carousel-caption d-none d-md-block">
-            <p class="beatyTitle"> تمتعي ببشرة نضرة
-              </p>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+     
     </div>
 <!-- Carousel wrapper -->
 
@@ -171,14 +124,14 @@
     <div class="container">
       <div class="row d-flex justify-content-around">
         <div class=" col-md-5 col-12 data mb-3 row d-flex justify-content-center align-items-center text-center" data-aos="fade-right">
-          <p class="fs-1 fw-bold">
+          <p class="fs-2 fw-bold">
              مرحبا بكم في مركز فيحاء للتجميل 
           </p>
-          <p class="fs-2">
+          <p class="fs-3">
           مركز وصالون متخصص في العناية بالجمال للمرأة يوفر كافة خدمات العناية بالبشرة والمكياج وكل ما تحتاجه للعناية بجمالها عن طريق مواكبة أحدث الطرق والأدوات لتحصل على العناية الكاملة والخدمة المميزة في مكان واحد يتمتع بالهدوء والخصوصية والاهتمام
           </p>
         </div>
-        <div class="col-12 col-md-5 mb-3" data-aos="fade-left">
+        <div class="col-12 col-md-5 mb-3" >
             <img class="image2 w-75" src="{{asset('images/staticimg/fyhaa2.jpeg')}} " alt="img2">
         </div>
 
@@ -253,7 +206,7 @@
      data-aos-duration="3000">
         <div class="category">
         <a href="{{ route('category', 'makeup_courses') }}">
-          <img src="{{asset('images/staticimg/course.jpeg')}}" alt="img3"  class="CategoryImage">
+          <img src="{{asset('images/staticimg/makeup.jpg')}}" alt="img3"  class="CategoryImage">
           <p class="CategoryWord"> 
           دورات تعليمية للمكياج
              </p> 
@@ -276,11 +229,10 @@
         <div class="col-lg-3 col-md-6 col-11 mb-3 mt-3 "  data-aos="fade-up"
      data-aos-duration="3000">
         <div class="category">
-        <a href="{{ route('category', 'products') }}"> 
+        <a href="{{ route('books') }}"> 
           <img src="{{asset('images/staticimg/makeupBooks.jfif')}}" alt="img3"  class="CategoryImage">
           <p class="CategoryWord"> 
-      كتيبات المكياج 
-             </p>  
+كتيب تعليم المكياج             </p>  
           </a>
         </div>
         </div>

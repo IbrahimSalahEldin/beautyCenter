@@ -37,7 +37,7 @@
       <option value="دورات تعليمية للمكياج">دورات تعليمية للمكياج</option>
       <option value="منتجات">منتجات</option> -->
       <option value="makeup" @if ($post->category == 'makeup') selected @endif>مكياج</option>
-      <option value="cure_humans" @if ($post->category == 'cure_humans') selected @endif>علاج البشر</option>
+      <option value="cure_humans" @if ($post->category == 'cure_humans') selected @endif>علاج البشرة</option>
       <option value="makeup_courses" @if ($post->category == 'makeup_courses') selected @endif> دورات تعليمية للمكياج</option>
       <option value="products" @if ($post->category == 'products') selected @endif>منتجات</option>
       

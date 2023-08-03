@@ -40,6 +40,16 @@
   rel="stylesheet" 
 />
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+
+
+<style>
+  .center-vertically {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+</style>
 </head>
 <body class="hold-transition sidebar-mini">
   <!-- nav bar -->
@@ -65,10 +75,10 @@
 
 
 
-<div class="container d-flex mt-5 justify-content-center bg-white" style="color:black;"> 
+<div class="container d-flex mt-5 justify-content-center bg-white " style="color:black;"> 
     <div class="row w-75">
 
-    <form action="{{ route('claint.store') }}" method="POST" enctype="multipart/form-data" dir="rtl">
+    <form action="{{ route('claint.store') }}" method="POST" enctype="multipart/form-data" dir="rtl" class="mb-5">
     @csrf
     @method('post')
 <!-- 
@@ -81,28 +91,34 @@
 
   
   <div class="form-group mt-3">
-    <label for="exampleInputEmail">الاسم</label>
-    <input type="text" class="form-control" name="name" 
+    <label for="exampleInputEmail" class="mb-4 d-flex justify-content-center fs-3 fw-bold">الاسم</label>
+    <div class="d-flex justify-content-center">
+    <input type="text" class="form-control mb-3 p-2 w-50" name="name" 
     value="{{old('name')}}"
     id="exampleInputEmail" aria-describedby="emailHelp" placeholder="ادخل الاسم بالكامل" >
+    </div>
   </div>
   @error('name')
   <div class="alert alert-danger">{{$message}}</div>
   @enderror
   
   <div class="form-group mt-3">
-    <label for="exampleInputEmail">الايميل</label>
-    <input type="email" class="form-control" name="email" 
+    <label for="exampleInputEmail" class="mb-4 d-flex justify-content-center fs-3 fw-bold">الايميل</label>
+    <div class="d-flex justify-content-center">
+    <input type="email" class="form-control p-2 w-50 mb-3 d-flex justify-content-center" name="email" 
     value="{{old('email')}}"
     id="exampleInputEmail" aria-describedby="emailHelp" placeholder="ادخل الايميل">
+</div>
   </div>
   @error('email')
   <div class="alert alert-danger">{{$message}}</div>
   @enderror
 
   
-  
-  <button type="submit" class="btn btn-primary mt-3" >سجل الان</button>
+  <div class="d-flex justify-content-center">
+  <button type="submit" class="btn mt-3 mb-5 fs-5 fw-bold Mybtn w-25 center-vertically">سجل الان</button>
+
+  </div>
 </form>
     </div>
 </div>
@@ -110,39 +126,19 @@
 
 
 
-  <footer class="bg-dark text-center text-white">
+  <footer class="bg-dark text-center text-white mt-5 ">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href=" https://linktr.ee/faihamekup?utm_source=linktree_profile_share" role="button"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
-
       <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/fihaaakary?igshid=OGIzYTJhMTRmYQ==" role="button"
         ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-github"></i
       ></a>
     </section>
     <!-- Section: Social media -->
@@ -150,9 +146,9 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-3 mb-0" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a class="text-white " href="https://mdbootstrap.com/">Fayhaa.com</a>
   </div>
 
 </footer>

@@ -80,14 +80,14 @@
                
                 <p> {{$book["description"]}}</p>   
                 <p class="salary">
-                  {{$book["price"]}}دولار    
+                  {{$book["price"]}}شيقل   
                 </p>
                 <a href="{{ route('claint.create', ['id' => $book->id]) }}" class="btn m-2 Mybtn">إحجز الأن</a>
 
 
                
 
-                <a  class="btn m-2 Mybtn " onclick="sendMessage()"> تواصل معنا عبر الوتساب</a>
+                <a  class="btn m-2 Mybtn w-50 " onclick="sendMessage()"> تواصل معنا عبر الوتساب</a>
 
             </div>
         </div>
@@ -105,33 +105,13 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href=" https://linktr.ee/faihamekup?utm_source=linktree_profile_share" role="button"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
-
       <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/fihaaakary?igshid=OGIzYTJhMTRmYQ==" role="button"
         ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-github"></i
       ></a>
     </section>
     <!-- Section: Social media -->
@@ -152,7 +132,7 @@
 <script>
 function sendMessage() {
   var phoneNumber = "054-5979912";
-  var message = "مرحبًا، أود أن أستفسر عن المنتج: {{$book->title}} - السعر: {{$book['price']}} دولار";
+  var message = "مرحبًا، أود أن أستفسر عن المنتج: {{$post->title}} - السعر: {{$post['price']}} دولار";
 
   var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
   window.open(whatsappURL, "_blank");

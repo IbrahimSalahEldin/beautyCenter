@@ -27,7 +27,7 @@
     value="{{old('category')}}"
     id="exampleInputEmail2" >
       <option value="makeup">مكياج</option>
-      <option value="cure_humans">علاج البشر</option>
+      <option value="cure_humans">علاج البشرة</option>
       <option value="makeup_courses">دورات تعليمية للمكياج</option>
       <option value="products">منتجات</option>
     </select>
