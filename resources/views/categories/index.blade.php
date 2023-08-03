@@ -104,7 +104,7 @@
       <!-- Controls -->
       
     
-      <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+    <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
      
 
       <div class="carousel-inner">
@@ -121,7 +121,7 @@
   <!-- end first section  -->
 
 
-  <section class="mt-5 pt-3 mb-5 pb-3" id="service">
+  <!-- <section class="mt-5 pt-3 mb-5 pb-3" id="service">
     <div class="container">
       <div class="row d-flex justify-content-center" dir="rtl">
         <p class="serviceTitle"> خدماتنا للحصول علي النضارة والاشراق والجمال </p>
@@ -138,7 +138,33 @@
       @endforeach
       </div>
      </div>
+</section> -->
+
+<section class="mt-5 pt-3 mb-5 pb-3" id="service">
+    <div class="container">
+        <div class="row d-flex justify-content-center" dir="rtl">
+            <p class="serviceTitle"> خدماتنا للحصول على النضارة والاشراق والجمال </p>
+            @foreach($posts as $post)
+                <div class="col-md-3 col-12 mx-3 mb-5 mydata">
+                    <a href="{{route('post.detal', ['id' => $post->id])}}">
+                        <img class="imgService" src="{{asset('images/posts/'.$post->image)}} "/>
+                    </a>
+                    <div class="serviceContent">
+                        @if($post->category == "makeup") 
+                            <p class="title"> {{$post->title}}</p>
+                            <!-- <p class="description"> {{$post["description"]}}</p> -->
+                        @else 
+                            <p class="title"> {{$post->title}}</p>
+                            <p class="price"> {{$post["price"]}}$</p>
+                          
+                        @endif
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 </section>
+
 
 {{ $posts->render('categories/custom-pagination') }}
 

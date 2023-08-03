@@ -132,7 +132,7 @@
 <script>
 function sendMessage() {
   var phoneNumber = "054-5979912";
-  var message = "مرحبًا، أود أن أستفسر عن المنتج: {{$post->title}} - السعر: {{$post['price']}} دولار";
+  var message = "مرحبًا، أود أن أستفسر عن المنتج: {{$book->title}} - السعر: {{$book['price']}} شيقل";
 
   var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
   window.open(whatsappURL, "_blank");

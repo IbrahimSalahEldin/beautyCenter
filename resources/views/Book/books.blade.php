@@ -93,74 +93,23 @@
 </section>
 
  
-  <!-- end navbar -->
-  <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+  
+<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+     
+
+     <div class="carousel-inner">
+       <div class="carousel-item active">
+         <img src="{{asset('images/staticimg/paner.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
+         
+       </div>
+
+   
+
+    
+   </div>
       <!-- Indicators -->
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-mdb-target="#carouselBasicExample"
-          data-mdb-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-mdb-target="#carouselBasicExample"
-          data-mdb-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-mdb-target="#carouselBasicExample"
-          data-mdb-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
+    
 
-      <!-- Inner -->
-      <div class="carousel-inner">
-        <!-- Single item -->
-        <div class="carousel-item active">
-          <img src="{{asset('images/staticimg/wo2.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
-          <div class="carousel-caption d-none d-md-block">
-            <p class="beatyTitle">مرحبا بكم في مركز تجميل
-              <br>
-              <span class="fay7aa"> ف</span>يحاء</p>
-          </div>
-        </div>
-
-        <!-- Single item -->
-        <div class="carousel-item">
-        <img src="{{asset('images/staticimg/wo3.jpg')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
-        <div class="carousel-caption d-none d-md-block">
-          <p class="beatyTitle">كوني متألقة ومشرقة 
-              </p>
-          </div>
-        </div>
-
-        <!-- Single item -->
-        <div class="carousel-item">
-        <img src="{{asset('images/staticimg/women1.png')}}" class="d-block SlidPhoto" alt="Sunset Over the City"/>
-        <div class="carousel-caption d-none d-md-block">
-            <p class="beatyTitle"> تمتعي ببشرة نضرة
-              </p>
-          </div>
-        </div>
-      </div>
-      <!-- Inner -->
-
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
 
 
 
