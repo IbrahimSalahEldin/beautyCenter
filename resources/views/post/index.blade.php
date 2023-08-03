@@ -30,8 +30,8 @@
                         منتجات
                     @endif
                 </td>
-                <td></td> <!-- Empty cell for price -->
-                <td></td> <!-- Empty cell for description -->
+                <td></td> 
+                <td></td> 
                 <td>{{ $post->created_at->format('d/m/Y H:i:s') }}</td>
                 <td>
                     <div class="d-flex justify-content-center">

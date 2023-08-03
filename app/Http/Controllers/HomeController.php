@@ -33,8 +33,19 @@ class HomeController extends Controller
 
     public function category(string $category)
     {
-        $posts = Post::where('category', $category)->paginate(5);
-        return view('categories.index', compact( 'posts'));
+        if ($category === 'products') {
+            $posts = Post::where('category', $category)->select('subcategory')->distinct()->paginate(5);
+        } else {
+            $posts = Post::where('category', $category)->paginate(5);
+        }
+    
+        return view('categories.index', compact('posts'));
+    }
+
+    public function subcategory(string $subcategory)
+    {
+        $posts = Post::where('subcategory', $subcategory)->paginate(5);
+        return view('categories.subcategory', compact('posts'));
     }
 
     public function books()
@@ -60,7 +71,5 @@ class HomeController extends Controller
         }
         return  new Response('', 205);
     }
-
-
 
 }
