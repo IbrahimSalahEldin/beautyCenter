@@ -38,7 +38,7 @@
 
   
   <div class="form-group mt-3" id="subcategoryDiv" style="display: none;">
-    <label for="exampleInputSubcategory">Subcategory</label>
+    <label for="exampleInputSubcategory">brand</label>
     <input type="text" class="form-control" name="subcategory" value="{{ old('subcategory') }}" id="exampleInputSubcategory" placeholder="Enter subcategory">
   </div>
 

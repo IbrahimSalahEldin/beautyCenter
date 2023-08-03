@@ -33,19 +33,26 @@ class HomeController extends Controller
 
     public function category(string $category)
     {
-        if ($category === 'products') {
-            $posts = Post::where('category', $category)->select('subcategory')->distinct()->paginate(5);
+       
+       
+        if ($category == 'products') {
+            $posts = Post::where('category', $category)->select(['id','category','subcategory'])->distinct()->paginate(5);
         } else {
+           
             $posts = Post::where('category', $category)->paginate(5);
+           
         }
+
+      
     
-        return view('categories.index', compact('posts'));
+        return view('categories.index', ['posts' => $posts]);
     }
+    
 
     public function subcategory(string $subcategory)
     {
         $posts = Post::where('subcategory', $subcategory)->paginate(5);
-        return view('categories.subcategory', compact('posts'));
+        return view('categories.brand', compact('posts'));
     }
 
     public function books()

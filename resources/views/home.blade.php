@@ -276,7 +276,7 @@
         <div class="col-lg-3 col-md-6 col-11 mb-3 mt-3 "  data-aos="fade-up"
      data-aos-duration="3000">
         <div class="category">
-        <a href="{{ route('category', 'products') }}"> 
+        <a href="{{ route('books') }}"> 
           <img src="{{asset('images/staticimg/makeupBooks.jfif')}}" alt="img3"  class="CategoryImage">
           <p class="CategoryWord"> 
       كتيبات المكياج 
