@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MakeupbookController;
 use App\Http\Controllers\MBookController;
 use App\Http\Controllers\PostController;
@@ -26,6 +27,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/category/{category}', [App\Http\Controllers\HomeController::class, 'category'])->name('category');
 Route::get('/post/detals/{id}', [App\Http\Controllers\HomeController::class, 'show'])->name('post.detal');
+Route::get('/categories/subcategory/{subcategory}', [HomeController::class , 'subcategory'])->name('category.subcategory');
+
 
 Route::get('/books', [App\Http\Controllers\HomeController::class, 'books'])->name('books');
 Route::get('/success', [App\Http\Controllers\HomeController::class, 'success'])->name('success');

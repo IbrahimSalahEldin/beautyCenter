@@ -35,6 +35,7 @@ class PostController extends Controller
         }
         $post->title= $post_info['title'];
         $post->category= $post_info['category'];
+        $post->subcategory = ($post_info['category'] === 'products') ? $post_info['subcategory'] : null;
         $post->price= $post_info['price'];
         $post->description = $post_info['description'];
         $post->slug =  Str::slug($request->post('title'));
@@ -79,6 +80,7 @@ class PostController extends Controller
         }
         $post->title= $post_info['title'];
         $post->category= $post_info['category'];
+        $post->subcategory = ($post_info['category'] === 'products') ? $post_info['subcategory'] : null;
         $post->price= $post_info['price'];
         $post->description = $post_info['description'];
         $post->slug =  Str::slug($request->post('title'));

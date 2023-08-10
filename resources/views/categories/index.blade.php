@@ -118,54 +118,57 @@
      
     </div>
 
-  <!-- end first section  -->
-
-
-  <!-- <section class="mt-5 pt-3 mb-5 pb-3" id="service">
-    <div class="container">
-      <div class="row d-flex justify-content-center" dir="rtl">
-        <p class="serviceTitle"> خدماتنا للحصول علي النضارة والاشراق والجمال </p>
-      @foreach($posts as $post)
-      <div class="col-md-3 col-12 mx-3 mb-5  mydata">
-        <a href="{{route('post.detal', ['id' => $post->id])}}" >
-           <img  class="imgService"  src="{{asset('images/posts/'.$post->image)}} "/>
-      </a>
-      <div class="serviceContent">
-          <p  class="title"> {{$post->title}}</p>
-          <p class="price"> {{$post["price"]}}$</p>
-      </div>
-      </div>
-      @endforeach
-      </div>
-     </div>
-</section> -->
-
-<section class="mt-5 pt-3 mb-5 pb-3" id="service">
+    <section class="mt-5 pt-3 mb-5 pb-3" id="service">
     <div class="container">
         <div class="row d-flex justify-content-center" dir="rtl">
-            <p class="serviceTitle"> خدماتنا للحصول على النضارة والاشراق والجمال </p>
+            <p class="serviceTitle">خدماتنا للحصول على النضارة والاشراق والجمال</p>
+            @php
+            $displayedSubcategories = [];
+            @endphp
             @foreach($posts as $post)
-                <div class="col-md-3 col-12 mx-3 mb-5 mydata">
-                    <a href="{{route('post.detal', ['id' => $post->id])}}">
-                        <img class="imgService" src="{{asset('images/posts/'.$post->image)}} "/>
-                    </a>
-                    <div class="serviceContent">
-                        @if($post->category == "makeup") 
-                            <p class="title"> {{$post->title}}</p>
-                            <!-- <p class="description"> {{$post["description"]}}</p> -->
-                        @else 
-                            <p class="title"> {{$post->title}}</p>
-                            <p class="price"> {{$post["price"]}}$</p>
-                          
-                        @endif
-                    </div>
-                </div>
+          
+                @if($post->category == "products")
+                    @if(!in_array($post->subcategory, $displayedSubcategories))
+                        @php
+                        $displayedSubcategories[] = $post->subcategory;
+                        @endphp
+<div class="row d-flex justify-content-center">
+                        <div style="background-color:#fef0e3;border-radius:30px;box-shadow: rgb(201, 201, 201) 10px 10px 10px 10px;" class="col-md-4 col-12 h-50 mx-5 d-flex justify-content-center align-items-center mt-5">
+    <a href="{{ route('category.subcategory', ['subcategory' => $post->subcategory]) }}" style="text-decoration:none">
+        <p class="serviceTitle mt-2">{{ $post->subcategory }} brand</p>
+    </a>
+</div>
+</div>
+                    @endif
+                @else
+                    @if($post->category == "makeup")
+                        <div class="col-md-3 col-12 mx-3 mb-5 mydata">
+                            <a href="{{ route('post.detal', ['id' => $post->id]) }}">
+                                <img class="imgService" src="{{ asset('images/posts/'.$post->image) }}" />
+                            </a>
+                            <div class="serviceContent">
+                                <p class="title">{{ $post->title }}</p>
+                            </div>
+                        </div>
+                    @elseif($post->category == "cure_humans" || $post->category == "makeup_courses")
+                        <div class="col-md-3 col-12 mx-3 mb-5 mydata">
+                            <a href="{{ route('post.detal', ['id' => $post->id]) }}">
+                                <img class="imgService" src="{{ asset('images/posts/'.$post->image) }}" />
+                            </a>
+                            <div class="serviceContent">
+                                <p class="title">{{ $post->title }}</p>
+                                <p class="price">{{ $post["price"] }}₪</p>
+                            </div>
+                        </div>
+                    @endif
+                @endif
             @endforeach
         </div>
     </div>
 </section>
 
 
+                           
 {{ $posts->render('categories/custom-pagination') }}
 
 

@@ -107,10 +107,13 @@
                 @if($post->category == "makeup") <!-- Display only title and description for "makeup" category -->
                     <h1>{{$post->title}}</h1>
                 @else
+                <div class="row">
                     <h1>{{$post->title}}</h1>
                     <p>{{$post["description"]}}</p>
-                    <p class="salary">{{$post["price"]}}دولار</p>
+                    <p class="salary">{{$post["price"]}}شيقل </p>
+                    </div>
                     @endif
+                    
                     <form>
                         <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إحجز الأن</button>
                     </form>
@@ -158,7 +161,7 @@
 <script>
 function sendMessage() {
   var phoneNumber = "054-5979912";
-  var message = "مرحبًا، أود أن أستفسر عن المنتج: {{$post->title}} - السعر: {{$post['price']}} دولار";
+  var message = "مرحبًا، أود أن أستفسر عن المنتج: {{$post->title}} - السعر: {{$post['price']}} شيقل";
 
   var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
   window.open(whatsappURL, "_blank");

@@ -124,7 +124,7 @@
       </a>
       <div class="serviceContent">
           <p  class="title"> {{$book->title}}</p>
-          <p class="price"> {{$book["price"]}}$</p>
+          <p class="price"> {{$book["price"]}}₪</p>
       </div>
       </div>
       @endforeach
