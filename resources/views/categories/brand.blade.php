@@ -117,7 +117,7 @@
                        
                   
                         
-                        <div class="col-md-3 col-12 mx-3 mb-5 mydata">
+                        <div class="col-md-3 col-5 mx-3 mb-5 mydata">
                             <a href="{{ route('post.detal', ['id' => $post->id]) }}">
                                 <img class="imgService" src="{{ asset('images/posts/'.$post->image) }}" />
                             </a>

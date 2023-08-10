@@ -84,7 +84,7 @@
                 </p>
                 <form>
 
-                <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إحجز الأن</button>
+                <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">احجزي الأن</button>
 
                </form>
             </div>
@@ -106,6 +106,7 @@
                 data-aos-easing="ease-in-sine">
                 @if($post->category == "makeup") <!-- Display only title and description for "makeup" category -->
                     <h1>{{$post->title}}</h1>
+                    <h1>{{$post->price}}</h1>
                 @else
                 <div class="row">
                     <h1>{{$post->title}}</h1>
@@ -115,7 +116,7 @@
                     @endif
                     
                     <form>
-                        <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">إحجز الأن</button>
+                        <button type="button" class="btn m-2 Mybtn" onclick="sendMessage()">احجزي الأن</button>
                     </form>
                
             </div>

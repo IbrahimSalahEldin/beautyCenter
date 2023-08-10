@@ -36,7 +36,7 @@ class HomeController extends Controller
        
        
         if ($category == 'products') {
-            $posts = Post::where('category', $category)->select(['id','category','subcategory'])->distinct()->paginate(5);
+            $posts = Post::where('category', $category)->select(['id','category','subcategory'])->distinct()->get();
         } else {
            
             $posts = Post::where('category', $category)->paginate(5);

@@ -34,8 +34,8 @@
                         منتجات
                     @endif
                 </td>
-                <td>--</td> 
-                <td>--</td> 
+                <td>{{$post->price}}</td> 
+                <td>{{$post->description}}</td> 
                 <td>{{ $post->created_at->format('d/m/Y H:i:s') }}</td>
                 <td>--</td>
                 <td>

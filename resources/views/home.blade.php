@@ -232,7 +232,7 @@
         <a href="{{ route('books') }}"> 
           <img src="{{asset('images/staticimg/makeupBooks.jfif')}}" alt="img3"  class="CategoryImage">
           <p class="CategoryWord"> 
-كتيب تعليم المكياج             </p>  
+              كتيب تعليم المكياج  </p>  
           </a>
         </div>
         </div>

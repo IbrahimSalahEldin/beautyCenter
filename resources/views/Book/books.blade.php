@@ -118,7 +118,7 @@
       <div class="row d-flex justify-content-center" dir="rtl">
         <p class="serviceTitle"> خدماتنا للحصول علي النضارة والاشراق والجمال </p>
       @foreach($books as $book)
-      <div class="col-md-3 col-12 mx-3 mb-5  mydata">
+      <div class="col-md-3 col-5 mx-3 mb-5  mydata">
         <a href="{{route('book.detal', ['id' => $book->id])}}" >
            <img  class="imgService"  src="{{asset('images/books/'.$book->image)}} "/>
       </a>

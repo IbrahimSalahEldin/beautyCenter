@@ -82,7 +82,7 @@
                 <p class="salary">
                   {{$book["price"]}}شيقل   
                 </p>
-                <a href="{{ route('claint.create', ['id' => $book->id]) }}" class="btn m-2 Mybtn">إحجز الأن</a>
+                <a href="{{ route('claint.create', ['id' => $book->id]) }}" class="btn m-2 Mybtn">احجزي </a>
 
 
                
