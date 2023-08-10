@@ -43,38 +43,14 @@
         id="exampleInputSubcategory" aria-describedby="emailHelp" placeholder="Enter subcategory">
     </div>
 
-<<<<<<< HEAD
+
   
-  <div class="form-group mt-3">
-    <label for="exampleInputEmail2">categoreis</label>
-    <select name="category"   class="form-control"
-    value="{{$post->category}}"
-    id="exampleInputEmail2" >
-      <!-- <option value="مكياج">مكياج</option>
-      <option value="علاج البشر">علاج البشر</option>
-      <option value="دورات تعليمية للمكياج">دورات تعليمية للمكياج</option>
-      <option value="منتجات">منتجات</option> -->
-      <option value="makeup" @if ($post->category == 'makeup') selected @endif>مكياج</option>
-      <option value="cure_humans" @if ($post->category == 'cure_humans') selected @endif>علاج البشرة</option>
-      <option value="makeup_courses" @if ($post->category == 'makeup_courses') selected @endif> دورات تعليمية للمكياج</option>
-      <option value="products" @if ($post->category == 'products') selected @endif>منتجات</option>
-      
-    </select>
-    <!-- <input type="text" class="form-control" name="category" 
-    value="{{old('category')}}"
-    id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter a catygory"> -->
-  </div>
-  @error('category')
-  <div class="alert alert-danger">{{$message}}</div>
-  @enderror
-  
-=======
     @if ($post->category != 'products')
         <script>
             document.getElementById('subcategoryDiv').style.display = 'none';
         </script>
     @endif
->>>>>>> 45345842755ec53933d1d2a6992e456e889121af
+
 
     <div class="form-group mt-3">
         <label for="exampleInputEmail1">Price</label>
